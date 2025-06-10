@@ -1,0 +1,79 @@
+.recipe-table {
+    border-spacing: 0;
+    background-color: rgb(150,150,150);
+    padding: 2vw;
+}
+
+.recipe-cell {
+    width: 4.0vw;
+    height: 4.0vw;
+    padding: 0;
+}
+
+.recipe-slot {
+    border: 1px solid black;
+    position: relative;
+}
+
+.ingredient-slot {
+    background-color: rgb(100,100,130);
+}
+
+.ingredient-upgrade-slot {
+    background-color: yellow !important;
+}
+
+.ingredient-constraint-slot {
+    border-color: red;
+}
+
+.result-slot {
+    background-color: rgb(130,100,100);
+}
+
+.recipe-image {
+    image-rendering: pixelated;
+    width: 3.5vw;
+    height: 3.5vw;
+    position: relative;
+    display: block;
+    left: 0.25vw;
+}
+
+.mini-item-icon {
+    image-rendering: pixelated;
+    width: 16px;
+    height: 16px;
+    bottom: -3px;
+    position: relative;
+}
+
+.recipe-amount {
+    position: absolute;
+    display: block;
+    right: 0.2vw;
+    bottom: 0.2vw;
+    font-size: 1.5vw;
+    color: red;
+}
+
+.recipe-chance {
+    position: absolute;
+    display: block;
+    right: 0vw;
+    top: 0vw;
+    font-size: 1.5vw;
+    color: orange;
+}
+
+.hover-recipe-list {
+    position: absolute;
+    left: 5vw;
+    bottom: 50%;
+    width: max-content;
+    font-size: 1vw;
+    z-index: 1;
+    color: white;
+    background-color: midnightblue;
+    border: 1px solid black;
+}
