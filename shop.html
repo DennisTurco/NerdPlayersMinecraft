@@ -5,15 +5,170 @@
   <title>Shop - NerdPlayers</title>
   <link rel="stylesheet" href="index.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    table {
+      width: 100%;
+      max-width: 900px;
+      margin: 20px auto;
+      border-collapse: collapse;
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+      vertical-align: middle;
+    }
+    th {
+      background-color: #4A90E2;
+      color: white;
+      font-weight: 600;
+    }
+    tr:hover {
+      background-color: #f0f7ff;
+    }
+    caption {
+      caption-side: top;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #333;
+    }
+    .price-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+    .price-list li {
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .price-list li i {
+      width: 16px;
+      text-align: center;
+      color: #4A90E2;
+    }
+    .empty-cell {
+      color: #aaa;
+      font-style: italic;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
 
   <header>
     <h1>Shop custom nel server</h1>
-    <p>Tutta la lista degli scambi con i villici</p>
+    <p>Lista completa con prezzi di acquisto e vendita per ogni oggetto.</p>
   </header>
 
   <main>
+
+    <table>
+      <caption>Lista oggetti disponibili</caption>
+      <thead>
+        <tr>
+          <th>Oggetto</th>
+          <th>Icona</th>
+          <th>Prezzo d'Acquisto</th>
+          <th>Prezzo di Vendita</th>
+          <th>Nome Villager</th>
+          <th>Locazione Villager</th>
+          <th>Descrizione</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Spada di Diamante Incantata</td>
+          <td><i class="fas fa-sword" style="color:#2c3e50;"></i></td>
+          <td>
+            <ul class="price-list">
+              <li><i class="fas fa-gem"></i> 15 Smeraldi</li>
+            </ul>
+          </td>
+          <td><span class="empty-cell">-</span></td>
+          <td>Armaiolo</td>
+          <td>Villaggio della Foresta</td>
+          <td>Spada potenziata con incantesimi personalizzati.</td>
+        </tr>
+        <tr>
+          <td>Piccone di Ferro</td>
+          <td><i class="fas fa-hammer" style="color:#7f8c8d;"></i></td>
+          <td>
+            <ul class="price-list">
+              <li><i class="fas fa-gem"></i> 8 Smeraldi</li>
+            </ul>
+          </td>
+          <td><span class="empty-cell">-</span></td>
+          <td>Fabbro</td>
+          <td>Villaggio Montano</td>
+          <td>Piccone resistente per mining efficiente.</td>
+        </tr>
+        <tr>
+          <td>Melone d'Oro</td>
+          <td><i class="fas fa-apple-whole" style="color:#f39c12;"></i></td>
+          <td>
+            <ul class="price-list">
+              <li><i class="fas fa-gem"></i> 3 Smeraldi</li>
+              <li><i class="fas fa-carrot"></i> 5 Carote</li>
+            </ul>
+          </td>
+          <td><span class="empty-cell">-</span></td>
+          <td>Agricoltore</td>
+          <td>Villaggio Pianura</td>
+          <td>Frutto raro con effetti speciali in-game.</td>
+        </tr>
+        <tr>
+          <td>Armatura di Cuoio Colorata</td>
+          <td><i class="fas fa-shield-alt" style="color:#e67e22;"></i></td>
+          <td>
+            <ul class="price-list">
+              <li><i class="fas fa-gem"></i> 12 Smeraldi</li>
+              <li><i class="fas fa-leaf"></i> 10 Pelle</li>
+            </ul>
+          </td>
+          <td><span class="empty-cell">-</span></td>
+          <td>Fabbro</td>
+          <td>Villaggio della Foresta</td>
+          <td>Set di armatura personalizzabile con colorazioni.</td>
+        </tr>
+        <tr>
+          <td>Blocchi di Redstone</td>
+          <td><i class="fas fa-cube" style="color:#e74c3c;"></i></td>
+          <td>
+            <ul class="price-list">
+              <li><i class="fas fa-gem"></i> 4 Smeraldi</li>
+            </ul>
+          </td>
+          <td>
+            <ul class="price-list">
+              <li><i class="fas fa-gem"></i> 2 Smeraldi</li>
+            </ul>
+          </td>
+          <td>Fabbro</td>
+          <td>Villaggio Montano</td>
+          <td>Materiale per circuiti e costruzioni elettriche.</td>
+        </tr>
+        <tr>
+          <td>Fieno</td>
+          <td><i class="fas fa-leaf" style="color:#27ae60;"></i></td>
+          <td><span class="empty-cell">-</span></td>
+          <td>
+            <ul class="price-list">
+              <li><i class="fas fa-gem"></i> 1 Smeraldo</li>
+            </ul>
+          </td>
+          <td>Allevatore</td>
+          <td>Villaggio Pianura</td>
+          <td>Il villager compra fieno dagli utenti.</td>
+        </tr>
+      </tbody>
+    </table>
 
     <div class="back-link">
       <a href="index.html"><i class="fas fa-arrow-left"></i> Torna alla Home</a>
@@ -25,6 +180,7 @@
       <a href="https://www.youtube.com/@nerd_players" target="_blank" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
       <a href="https://discord.com/invite/kbZVz3m" target="_blank" aria-label="Discord"><i class="fab fa-discord"></i></a>
     </div>
+
   </main>
 
 </body>

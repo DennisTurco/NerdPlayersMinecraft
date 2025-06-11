@@ -4,9 +4,86 @@
   <meta charset="UTF-8" />
   <title>Screenshots - NerdPlayers</title>
   <link rel="stylesheet" href="index.css" />
-  <link rel="stylesheet" href="screenshots.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
+
+<style>
+  body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-item {
+      text-align: center;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+      cursor: pointer;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+
+    .caption {
+      margin-top: 8px;
+      font-size: 0.95rem;
+      color: #333;
+    }
+
+    /* Lightbox */
+    .lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      display: none;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+
+    .lightbox:target {
+      display: flex;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: white;
+      font-size: 30px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+</style>
 <body>
 
   <header>
@@ -26,48 +103,48 @@
         <div class="caption">Castello Dona - 21/01/2024</div>
       </div>
       <div class="gallery-item">
-        <a href="#img3"><img src="screenshots/image3.png" alt=" - 17/08/2022" /></a>
-        <div class="caption"> - 17/08/2022</div>
+        <a href="#img3"><img src="screenshots/image3.png" alt="Parkour - 17/08/2022" /></a>
+        <div class="caption">Parkour - 17/08/2022</div>
       </div>
       <div class="gallery-item">
-        <a href="#img4"><img src="screenshots/image4.png" alt=" - 17/08/2022" /></a>
-        <div class="caption"> - 17/08/2022</div>
+        <a href="#img4"><img src="screenshots/image4.png" alt="Castello Zambo - 17/08/2022" /></a>
+        <div class="caption">Castello Zambo - 17/08/2022</div>
       </div>
       <div class="gallery-item">
-        <a href="#img5"><img src="screenshots/image5.png" alt=" - 17/08/2022" /></a>
-        <div class="caption"> - 17/08/2022</div>
+        <a href="#img5"><img src="screenshots/image5.png" alt="Shop - 17/08/2022" /></a>
+        <div class="caption">Shop - 17/08/2022</div>
       </div>
       <div class="gallery-item">
-        <a href="#img6"><img src="screenshots/image6.png" alt=" - 17/08/2022" /></a>
-        <div class="caption"> - 17/08/2022</div>
+        <a href="#img6"><img src="screenshots/image6.png" alt="Shop - 17/08/2022" /></a>
+        <div class="caption">Shop - 17/08/2022</div>
       </div>
       <div class="gallery-item">
-        <a href="#img7"><img src="screenshots/image7.png" alt=" - 17/08/2022" /></a>
-        <div class="caption"> - 17/08/2022</div>
+        <a href="#img7"><img src="screenshots/image7.png" alt="Castello Dona - 17/08/2022" /></a>
+        <div class="caption">Castello Dona - 17/08/2022</div>
       </div>
       <div class="gallery-item">
-        <a href="#img7"><img src="screenshots/image8.png" alt=" - 17/08/2022" /></a>
-        <div class="caption"> - 17/08/2022</div>
+        <a href="#img8"><img src="screenshots/image8.png" alt="Shop - 17/08/2022" /></a>
+        <div class="caption">Shop - 17/08/2022</div>
       </div>
       <div class="gallery-item">
-        <a href="#img8"><img src="screenshots/image9.png" alt=" - 17/08/2022" /></a>
-        <div class="caption"> - 17/08/2022</div>
+        <a href="#img9"><img src="screenshots/image9.png" alt="Villaggio ghiaccio Colfe00 - 17/08/2022" /></a>
+        <div class="caption">Villaggio ghiaccio Colfe00 - 17/08/2022</div>
       </div>
       <div class="gallery-item">
-        <a href="#img9"><img src="screenshots/image10.png" alt=" - 17/08/2022" /></a>
-        <div class="caption"> - 17/08/2022</div>
+        <a href="#img10"><img src="screenshots/image10.png" alt="Villaggio ghiaccio Colfe00 - 17/08/2022" /></a>
+        <div class="caption">Villaggio ghiaccio Colfe00 - 17/08/2022</div>
       </div>
       <div class="gallery-item">
-        <a href="#img10"><img src="screenshots/image11.png" alt=" - 17/08/2022" /></a>
-        <div class="caption"> - 17/08/2022</div>
+        <a href="#img11"><img src="screenshots/image11.png" alt="Arena - 17/08/2022" /></a>
+        <div class="caption">Arena - 17/08/2022</div>
       </div>
       <div class="gallery-item">
-        <a href="#img12"><img src="screenshots/image12.png" alt=" - 17/08/2022" /></a>
-        <div class="caption"> - 17/08/2022</div>
+        <a href="#img12"><img src="screenshots/image12.png" alt="Villaggio Denno - 17/08/2022" /></a>
+        <div class="caption">Villaggio Denno - 17/08/2022</div>
       </div>
       <div class="gallery-item">
-        <a href="#img13"><img src="screenshots/image13.png" alt=" - 17/08/2022" /></a>
-        <div class="caption"> - 17/08/2022</div>
+        <a href="#img13"><img src="screenshots/image13.png" alt="Villaggio Denno - 17/08/2022" /></a>
+        <div class="caption">Villaggio Denno - 17/08/2022</div>
       </div>
       <!-- Aggiungi altre immagini seguendo lo stesso schema -->
     </div>
@@ -83,47 +160,47 @@
     </div>
     <div id="img3" class="lightbox">
       <a href="#" class="lightbox-close">&times;</a>
-      <img src="screenshots/image3.png" alt=" - 17/08/2022" />
+      <img src="screenshots/image3.png" alt="Parkour - 17/08/2022" />
     </div>
     <div id="img4" class="lightbox">
       <a href="#" class="lightbox-close">&times;</a>
-      <img src="screenshots/image4.png" alt=" - 17/08/2022" />
+      <img src="screenshots/image4.png" alt="Castello Zambo - 17/08/2022" />
     </div>
     <div id="img5" class="lightbox">
       <a href="#" class="lightbox-close">&times;</a>
-      <img src="screenshots/image5.png" alt=" - 17/08/2022" />
+      <img src="screenshots/image5.png" alt="Shop - 17/08/2022" />
     </div>
     <div id="img6" class="lightbox">
       <a href="#" class="lightbox-close">&times;</a>
-      <img src="screenshots/image6.png" alt=" - 17/08/2022" />
+      <img src="screenshots/image6.png" alt="Shop - 17/08/2022" />
     </div>
     <div id="img7" class="lightbox">
       <a href="#" class="lightbox-close">&times;</a>
-      <img src="screenshots/image7.png" alt=" - 17/08/2022" />
+      <img src="screenshots/image7.png" alt="Castello Dona - 17/08/2022" />
     </div>
     <div id="img8" class="lightbox">
       <a href="#" class="lightbox-close">&times;</a>
-      <img src="screenshots/image8.png" alt=" - 17/08/2022" />
+      <img src="screenshots/image8.png" alt="Shop - 17/08/2022" />
     </div>
     <div id="img9" class="lightbox">
       <a href="#" class="lightbox-close">&times;</a>
-      <img src="screenshots/image9.png" alt=" - 17/08/2022" />
+      <img src="screenshots/image9.png" alt="Villaggio ghiaccio Colfe00 - 17/08/2022" />
     </div>
     <div id="img10" class="lightbox">
       <a href="#" class="lightbox-close">&times;</a>
-      <img src="screenshots/image10.png" alt=" - 17/08/2022" />
+      <img src="screenshots/image10.png" alt="Villaggio ghiaccio Colfe00 - 17/08/2022" />
     </div>
     <div id="img11" class="lightbox">
       <a href="#" class="lightbox-close">&times;</a>
-      <img src="screenshots/image11.png" alt=" - 17/08/2022" />
+      <img src="screenshots/image11.png" alt="Arena - 17/08/2022" />
     </div>
     <div id="img12" class="lightbox">
       <a href="#" class="lightbox-close">&times;</a>
-      <img src="screenshots/image12.png" alt=" - 17/08/2022" />
+      <img src="screenshots/image12.png" alt="Villaggio Denno - 17/08/2022" />
     </div>
     <div id="img13" class="lightbox">
       <a href="#" class="lightbox-close">&times;</a>
-      <img src="screenshots/image13.png" alt=" - 17/08/2022" />
+      <img src="screenshots/image13.png" alt="Villaggio Denno - 17/08/2022" />
     </div>
 
     <div class="back-link">
