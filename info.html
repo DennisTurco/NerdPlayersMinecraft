@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>Informazioni tecniche - NerdPlayers</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<style>
+    .plugin-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 1em;
+}
+
+.plugin-card {
+  background-color: #f3f3f3;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+
+.plugin-card h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.plugin-card p {
+  margin: 5px 0 0;
+  color: #555;
+}
+
+.icon {
+    color: #4A90E2;
+}
+</style>
+<body>
+
+  <header>
+    <h1>Informazioni tecniche</h1>
+    <p>
+      In questa pagina trovi informazioni utili sulla configurazione del server NerdPlayers, inclusi i plugin attivi e dettagli tecnici.
+    </p>
+  </header>
+
+  <main>
+
+    <div class="back-link">
+      <a href="index.html"><i class="fas fa-arrow-left"></i> Torna alla Home</a>
+    </div>
+
+    <!-- INFO SERVER -->
+    <section>
+      <h2><i class="fas fa-server icon"></i> Specifiche del Server</h2>
+      <ul>
+        <li><strong>Versione Minecraft:</strong> PaperMC 1.20.4</li>
+        <li><strong>Slot:</strong> 50 giocatori</li>
+        <li><strong>Host:</strong> GameHosting.it (VPS dedicata)</li>
+        <li><strong>RAM assegnata:</strong> 6GB</li>
+        <li><strong>Render Distance:</strong> 10 chunk</li>
+      </ul>
+    </section>
+
+    <!-- PLUGIN INSTALLATI -->
+    <section>
+      <h2><i class="fas fa-plug icon"></i> Plugin Installati</h2>
+      <div class="plugin-list">
+
+        <div class="plugin-card">
+          <h3><i class="fas fa-shield-alt icon"></i> EssentialsX</h3>
+          <p>Plugin base per i comandi principali: /home, /spawn, /msg, e molto altro.</p>
+        </div>
+
+        <div class="plugin-card">
+          <h3><i class="fas fa-cogs icon"></i> LuckPerms</h3>
+          <p>Gestione avanzata dei permessi, gruppi e ruoli dei giocatori.</p>
+        </div>
+
+        <div class="plugin-card">
+          <h3><i class="fas fa-bolt icon"></i> Vault</h3>
+          <p>API essenziale per far comunicare i plugin di economia, chat e permessi.</p>
+        </div>
+
+        <div class="plugin-card">
+          <h3><i class="fas fa-scroll icon"></i> MythicMobs</h3>
+          <p>Plugin per creare mob personalizzati, boss e abilità speciali.</p>
+        </div>
+
+        <div class="plugin-card">
+          <h3><i class="fas fa-map-marked-alt icon"></i> Dynmap</h3>
+          <p>Mappa dinamica del mondo visibile via browser in tempo reale.</p>
+        </div>
+
+        <div class="plugin-card">
+          <h3><i class="fas fa-lock icon"></i> GriefPrevention</h3>
+          <p>Protezione delle costruzioni tramite claim sicuri e facili da usare.</p>
+        </div>
+
+        <div class="plugin-card">
+          <h3><i class="fas fa-paint-brush icon"></i> ItemEdit</h3>
+          <p>Modifica avanzata di armi, armature e oggetti con nomi, lore e colori.</p>
+        </div>
+
+        <div class="plugin-card">
+          <h3><i class="fas fa-magic icon"></i> ItemsAdder</h3>
+          <p>Plugin per aggiungere oggetti, texture personalizzate e animazioni al gioco.</p>
+        </div>
+
+      </div>
+
+      <h2><i class="fas fa-box-open icon"></i> Modpack Consigliato</h2>
+        <p>Per un'esperienza completa e immersiva, ti consigliamo di scaricare il nostro modpack client-side.</p>
+        <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 1em;">
+            <a href="modpacks/NerdPlayersModpack.zip" download class="download-button">
+            <i class="fas fa-download"></i> Scarica Modpack
+            </a>
+            <a href="https://modrinth.com/" target="_blank" class="download-button">
+            <i class="fas fa-external-link-alt"></i> Scarica Modrinth
+            </a>
+        </div>
+    </section>
+
+    <!-- SOCIAL -->
+    <div class="socials">
+      <h2>Seguici sui social</h2>
+      <a href="https://www.youtube.com/@nerd_players" target="_blank" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+      <a href="https://discord.com/invite/kbZVz3m" target="_blank" aria-label="Discord"><i class="fab fa-discord"></i></a>
+    </div>
+
+  </main>
+
+</body>
+</html>
