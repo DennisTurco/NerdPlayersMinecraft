@@ -1,0 +1,146 @@
+
+#TODO: fixhere -> non spara le frecce
+#TODO: fixhere -> non si vede il MUSIC_DISC in mano, ne lo droppa
+PP_MarcoCassese:
+  Type: PILLAGER
+  Display: '&c&lPronto Pizza - Marco Cassese'
+  Faction: ProntoPizza
+  Health: 20
+  Worlds: world
+  Options:
+    AlwaysShowName: false
+    Silent: false
+    KnockbackResistance: 0.2
+    MaxCombatDistance: 20
+    FollowRange: 20
+    MovementSpeed: 0.3
+  AIGoalSelectors:
+    - arrowattack
+    - skeletonbowattack
+    - attackothermobs <50% 1
+    - float
+    - opendoors
+    - closedoors
+    - randomlookaround
+    - fleeplayers <20% 1
+  AITargetSelectors:
+    - clear
+    - attacker
+    - players
+    - monsters
+  Drops:
+    #TODO: swap sunflower with music disc
+    - SUNFLOWER{enchants=KNOCKBACK:10} 1to1 1
+    - BOW 1to1 0.5
+    - ARROW 5to10 0.5
+    - exp 10-25 1
+  Equipment:
+    #TODO: swap sunflower with music disc
+    #TODO: quando lo droppa deve essere incantato
+    - PLAYER_HEAD{skullTexture=eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWFjOTUzNzA2NTgwOWRlZjJkZmI5ZjBlNjkzYTE1YjQxZDcxYzA0Yjk2NDBkYmIzMGEyN2JlZGFhMzg3ZjdmNiJ9fX0=} HEAD
+    - CROSSBOW{enchants=QUICK_CHARGE:3} HAND
+    - SUNFLOWER{name="Pizza<&sp>ai<&sp>tarzanalli<&sp>di<&sp>Marco"} OFFHAND
+  KillMessages:
+    - '<target.name> è stato sconfitto dalla sottopaga di MarcoCassese!'
+  Disguise:
+    Type: player
+    Skin: Kurdie
+  Skills:
+  - speak{m="Ce l'hai flosscio <trigger.name>??";cooldown=20} @PlayersInRadius{r=40}
+    ~onCombat >0 0.2
+  - speak{m="<trigger.name>, Non ti pago più di 6 euro l'ora!"} @PlayersInRadius{r=40} ~onPlayerKill
+    >0 1
+  - runaigoalselector{goal=fleeplayers} <20% 1
+
+PP_Marisa:
+  Type: PILLAGER
+  Display: '&c&lPronto Pizza - Marisa'
+  Faction: ProntoPizza
+  Health: 20
+  Worlds: world
+  Options:
+    AlwaysShowName: false
+    Silent: false
+    KnockbackResistance: 0.2
+    MaxCombatDistance: 20
+    FollowRange: 20
+    MovementSpeed: 0.3
+  AIGoalSelectors:
+    - meleeattack
+    - rangedattack{damage=5,delay=60,range=20} <50% 1
+    - attackothermobs <50% 1
+    - float
+    - opendoors
+    - closedoors
+    - randomlookaround
+    - fleeplayers <20% 1
+  AITargetSelectors:
+    - clear
+    - attacker
+    - players
+    - monsters
+  Drops:
+    - IRON_SWORD 1to1 0.2
+    - exp 10-25 1
+  Equipment:
+    - PLAYER_HEAD{skullTexture=eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzVjYmVhZDNmNWJkNWNhNTU2YjBmOTliNmQ4MGI5ZWRhYTc4NzUyYTNhMGNmNDljMWJiNGEwN2Y0MDIxNmM5OSJ9fX0=} HEAD
+    - IRON_SWORD HAND
+  KillMessages:
+    - '<target.name> è stato sconfitto dalle ladrate della Marisa!'
+  Disguise:
+    Type: player
+    Player: Ashijin
+    Skin: Notch
+  Skills:
+  - speak{m="Consegna guaglione";cooldown=20} @PlayersInRadius{r=40} ~onCombat >0 0.2
+  - runaigoalselector{goal=fleeplayers} <20% 1
+
+PP_Nello:
+  Type: PILLAGER
+  Display: '&c&lPronto Pizza - Nello'
+  Faction: ProntoPizza
+  Health: 20
+  Worlds: world
+  Options:
+    AlwaysShowName: false
+    Silent: false
+    KnockbackResistance: 0.2
+    MaxCombatDistance: 20
+    FollowRange: 20
+    MovementSpeed: 0.3
+  AIGoalSelectors:
+    - meleeattack
+    - rangedattack{damage=5,delay=60,range=20} <50% 1
+    - attackothermobs <50% 1
+    - float
+    - opendoors
+    - closedoors
+    - randomlookaround
+    - fleeplayers <20% 1
+  AITargetSelectors:
+    - clear
+    - attacker
+    - players
+    - monsters
+  Drops:
+    - IRON_SWORD 1to1 0.2
+    - exp 10-25 1
+  Equipment:
+    - PLAYER_HEAD{skullTexture=eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmY3N2ZiNTVmOTM3ODVhZDhlMTA5Zjk2NGFhMzhmZmM3ODdiNWUyMWVmNjliYWRmZjQzNjIxYjgwOThiMDI0MSJ9fX0=} HEAD
+    - IRON_SWORD HAND
+  KillMessages:
+    - '<target.name> è stato sconfitto dall incomprensione linguistica di Nello!'
+  Disguise:
+    Type: player
+    Skin: 'meeeh'
+    Player: Steve
+    Burning: true
+    Blocking: true
+    Invisible: false
+    ShowName: false
+    Sneaking: true
+    Sprinting: true
+    ModifyBoundingBox: false
+  Skills:
+    - speak{m="Quann ij er giofan' faticav' assai";cooldown=20} @PlayersInRadius{r=40} ~onCombat >0 0.2
+    - runaigoalselector{goal=fleeplayers} <20% 1

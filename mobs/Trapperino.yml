@@ -1,0 +1,63 @@
+Trapperino:
+  Type: PIGLIN_BRUTE
+  Display: '&e&lTrapperino'
+  Health: 16
+  Damage: 5
+  Worlds: world
+  Options:
+    AlwaysShowName: false
+    PreventOtherDrops: true
+    Despone: true
+    PreventItemPickup: true
+    PreventSunburn: true
+    PreventRandomEquipment: true
+    Silent: false
+    KnockbackResistance: 0
+    MaxCombatDistance: 20
+    FollowRange: 20
+    MovementSpeed: 0.25
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:                               
+    - panicWhenOnFire
+    - meleeattack
+    - float
+    - opendoors
+    - closedoors
+    - randomlookaround
+  AITargetSelectors:
+    - clear
+    - attacker
+    - players
+    - golems
+    - monsters                         
+  Drops:
+    #TODO: quando lo droppa deve essere incantato                              
+    - NOTE_BLOCK{name="Cassa del cazzo del Trapper"} 1to1 1
+    - exp 10-25 1                      
+  Equipment:  
+    - PLAYER_HEAD{skullTexture=eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDdkODkwMTk1ZjU1ZDEwY2VlOTY0ODZhYjc2NjI0M2E3MmFjM2EwM2QwNDQ1ZTFiMDNjMjlmZWIxZjBlNTJkNSJ9fX0=} HEAD
+    - JUKEBOX{enchants=KNOCKBACK:1} HAND
+  KillMessages:                             
+    - '<target.name> è stato trepperato (purtroppo....)'
+  Disguise:
+    Type: player
+    Player: '&8Not Darkitect'
+    Skin: Darkitect
+  Skills:
+    - speak{m="Ti faccio esplodere le orecchie con la musica del trapping!!";cooldown=20} @PlayersInRadius{r=40} ~onCombat >0 0.2
+    - runaigoalselector{goal=clear} <20% 1
+    - runaigoalselector{goal=fleeplayers} <20% 1
+    - runaigoalselector{goal=randomlookaround} <20% 1
+    - RemoveHeldItem JUKEBOX ~onDamaged <20% 1
+    
+    #TODO: fixhere
+    #- DropItem JUKEBOX ~onDamaged <20% 1
+    
+    #TODO: fixhere
+    # - playmusicskill <100% 1
+    # - playmusicskill:
+    #     type: playsound
+    #     sound: BLOCK_NOTE_BLOCK_HARP
+    #     pitch: 1
+    #     volume: 1

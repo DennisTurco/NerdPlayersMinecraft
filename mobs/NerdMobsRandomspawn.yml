@@ -1,0 +1,100 @@
+# For more information, check out the plugin manual or join us on Discord:
+# http://www.mythicmobs.net
+#  
+
+# ###################### BOSS
+RandomPattini:
+  MobType: BossPattinico_V2
+  Worlds: world
+  Chance: 0.005
+  Priority: 1
+  Action: REPLACE
+  Conditions:
+  - inblock{b=water} false
+  - outside true
+RandomDona:
+  MobType: Dona31
+  Worlds: world
+  Chance: 0.005
+  Priority: 1
+  Action: REPLACE
+  Conditions:
+  - inblock{b=water} false
+  - outside true
+
+# ###################### SINGLE ENEMY
+RandomTrapperino:
+  MobType: Trapperino
+  Worlds: world
+  Chance: 0.1
+  Priority: 1
+  Action: REPLACE
+  Conditions:
+  - inblock{b=water} false
+
+RandomCovid:
+  MobType: Covid
+  Worlds: world
+  Chance: 0.1
+  Priority: 1
+  Action: REPLACE
+  Conditions:
+  - inblock{b=water} false
+
+
+# ###################### FACTION
+RandomMarcoCassese:
+  MobType: PP_MarcoCassese
+  Worlds: world
+  Chance: 0.02
+  Priority: 1
+  Action: REPLACE
+  Conditions:
+  - inblock{b=water} false
+  - outside true
+RandomMarisa:
+  MobType: PP_Marisa
+  Worlds: world
+  Chance: 0.02
+  Priority: 1
+  Action: REPLACE
+  Conditions:
+  - inblock{b=water} false
+  - outside true
+RandomNello:
+  MobType: PP_Nello
+  Worlds: world
+  Chance: 0.02
+  Priority: 1
+  Action: REPLACE
+  Conditions:
+  - inblock{b=water} false
+  - outside true
+
+RandomSoldatoNapoletano:
+  MobType: N_SoldatoNapoletano
+  Worlds: world
+  Chance: 0.02
+  Priority: 1
+  Action: REPLACE
+  Conditions:
+  - inblock{b=water} false
+  - outside true
+RandomArciereNapoletano:
+  MobType: N_ArciereNapoletano
+  Worlds: world
+  Chance: 0.02
+  Priority: 1
+  Action: REPLACE
+  Conditions:
+  - inblock{b=water} false
+  - outside true
+RandomCavaliereNapoletano:
+  MobType: N_CavaliereNapoletano
+  Worlds: world
+  Chance: 0.02
+  Priority: 1
+  Action: REPLACE
+  Conditions:
+  - inblock{b=water} false
+  - outside true
