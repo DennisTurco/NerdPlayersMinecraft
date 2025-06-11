@@ -115,3 +115,15 @@ ul {
 .back-link a:hover {
   text-decoration: underline;
 }
+
+.protected {
+    display: none;
+  }
+
+  #password-feedback.success {
+  color: green;
+}
+
+#password-feedback.error {
+  color: red;
+}

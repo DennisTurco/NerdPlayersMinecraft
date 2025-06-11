@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
   <meta charset="UTF-8" />
   <title>Mobs Custom - NerdPlayers</title>
+  <script src="password.js" defer></script>
   <link rel="stylesheet" href="index.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
@@ -12,11 +14,12 @@
       background: #fff;
       padding: 25px 30px;
       border-radius: 15px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       color: #333;
       font-size: 1.1rem;
       line-height: 1.6;
     }
+
     header p {
       max-width: 900px;
       margin: 20px auto 40px auto;
@@ -25,6 +28,7 @@
       text-align: center;
       line-height: 1.5;
     }
+
     .mob-card {
       display: flex;
       gap: 20px;
@@ -32,6 +36,7 @@
       padding: 20px 0;
       align-items: center;
     }
+
     .mob-icon {
       flex-shrink: 0;
       width: 80px;
@@ -43,26 +48,31 @@
       align-items: center;
       font-size: 50px;
       color: #4A90E2;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
+
     .mob-details {
       flex-grow: 1;
     }
+
     .mob-name {
       font-weight: 700;
       font-size: 1.4rem;
       margin-bottom: 5px;
     }
+
     .mob-desc {
       font-style: italic;
       color: #666;
       margin-bottom: 10px;
     }
+
     .mob-stats {
       display: flex;
       gap: 20px;
       margin-bottom: 10px;
     }
+
     .stat-item {
       background: #f0f8ff;
       padding: 5px 10px;
@@ -72,9 +82,11 @@
       min-width: 80px;
       text-align: center;
     }
+
     .mob-drop {
       font-size: 0.95rem;
     }
+
     .mob-drop ul {
       list-style: none;
       padding-left: 0;
@@ -82,6 +94,7 @@
       display: flex;
       gap: 15px;
     }
+
     .mob-drop li {
       background: #e7f0fe;
       border-radius: 6px;
@@ -93,6 +106,7 @@
       font-weight: 500;
       color: #1a3d7c;
     }
+
     .mob-drop li i {
       font-size: 1.2rem;
       color: #4A90E2;
@@ -106,375 +120,392 @@
       border-radius: 8px;
       font-weight: 600;
       text-decoration: none;
-      box-shadow: inset 0 0 2px rgba(0,0,0,0.1);
+      box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.1);
       transition: background 0.3s;
     }
+
     .mob-download a:hover {
       background: #e0eefe;
     }
   </style>
 </head>
+
 <body>
 
   <header>
     <h1>Mobs Custom</h1>
-    <p>Esplora i nostri mobs personalizzati, con statistiche dettagliate e informazioni sui drop.</p>
+    <p>Esplora i nostri mobs personalizzati, con statistiche dettagliate e informazioqwe1ni sui drop.</p>
   </header>
 
   <main>
 
-    <div class="mob-download" style="margin-top: 10px;">
+    <div id="password-feedback" style="color: red; font-weight: bold; margin-bottom: 10px;"></div>
+
+    <div class="mob-download protected" style="margin-top: 10px;">
       <a href="mobs/NerdMobsRandomspawn.yml" download>
         📄 Scarica lista random spawns versione YML
       </a>
     </div>
 
     <div class="mob-card">
-  <div class="mob-icon"><i class="fas fa-skull-crossbones"></i></div>
-  <div class="mob-details">
-    <div class="mob-name">§4§lSpirito di Dona31</div>
-    <div class="mob-desc">Uno spirito inquieto che vaga tra i Donatelli, pronto a farti esplodere con un colpo solo.</div>
-    <div class="mob-stats">
-      <div class="stat-item">Vita: 100</div>
-      <div class="stat-item">Danno: 0 (esplosivo)</div>
-      <div class="stat-item">Velocità: 0.35</div>
-    </div>
-    <div class="mob-drop">
-      Drop:
-      <ul>
-        <li><i class="fas fa-gem"></i> Smeraldo Donico <strong>(15%)</strong></li>
-        <li><i class="fas fa-head-side-virus"></i> Testa di Dona31 <strong>(50%)</strong></li>
-        <li><i class="fas fa-star"></i> EXP: 100-150 <strong>(100%)</strong></li>
-      </ul>
-    </div>
-    <div class="mob-download" style="margin-top: 10px;">
-      <a href="mobs/Dona31.yml" download>
-        📄 Scarica mob versione YML
-      </a>
-    </div>
-  </div>
-</div>
-
-<div class="mob-card">
-  <div class="mob-icon"><i class="fas fa-virus"></i></div>
-  <div class="mob-details">
-    <div class="mob-name">§e§lCovid</div>
-    <div class="mob-desc">Un’ape malata, travestita da zombie, che diffonde il virus tra i giocatori. Colpisce con messaggi inquietanti e sorprendentemente forti.</div>
-    <div class="mob-stats">
-      <div class="stat-item">Vita: 2</div>
-      <div class="stat-item">Danno: 8</div>
-      <div class="stat-item">Velocità: 0.3</div>
-    </div>
-    <div class="mob-drop">
-      Drop:
-      <ul>
-        <li><i class="fas fa-star"></i> EXP: 10–25 <strong>(100%)</strong></li>
-      </ul>
-    </div>
-    <div class="mob-abilities">
-      Abilità:
-      <ul>
-        <li>🗣️ "Ti sto appiccicando il Covid" (quando inizia il combattimento)</li>
-        <li>🗣️ "<em>&lt;Nome del player&gt;</em>, ora hai il covid" (quando uccide un player)</li>
-      </ul>
+      <div class="mob-icon"><i class="fas fa-skull-crossbones"></i></div>
+      <div class="mob-details">
+        <div class="mob-name">§4§lSpirito di Dona31</div>
+        <div class="mob-desc">Uno spirito inquieto che vaga tra i Donatelli, pronto a farti esplodere con un colpo solo.
+        </div>
+        <div class="mob-stats">
+          <div class="stat-item">Vita: 100</div>
+          <div class="stat-item">Danno: 0 (esplosivo)</div>
+          <div class="stat-item">Velocità: 0.35</div>
+        </div>
+        <div class="mob-drop">
+          Drop:
+          <ul>
+            <li><i class="fas fa-gem"></i> Smeraldo Donico <strong>(15%)</strong></li>
+            <li><i class="fas fa-head-side-virus"></i> Testa di Dona31 <strong>(50%)</strong></li>
+            <li><i class="fas fa-star"></i> EXP: 100-150 <strong>(100%)</strong></li>
+          </ul>
+        </div>
+        <div class="mob-download" style="margin-top: 10px;">
+          <a href="mobs/Dona31.yml" download>
+            📄 Scarica mob versione YML
+          </a>
+        </div>
+      </div>
     </div>
 
-    <div class="mob-download" style="margin-top: 10px;">
-      <a href="mobs/Covid.yml" download>
-        📄 Scarica mob versione YML
-      </a>
-    </div>
-  </div>
-</div>
+    <div class="mob-card">
+      <div class="mob-icon"><i class="fas fa-virus"></i></div>
+      <div class="mob-details">
+        <div class="mob-name">§e§lCovid</div>
+        <div class="mob-desc">Un'ape malata, travestita da zombie, che diffonde il virus tra i giocatori. Colpisce con
+          messaggi inquietanti e sorprendentemente forti.</div>
+        <div class="mob-stats">
+          <div class="stat-item">Vita: 2</div>
+          <div class="stat-item">Danno: 8</div>
+          <div class="stat-item">Velocità: 0.3</div>
+        </div>
+        <div class="mob-drop">
+          Drop:
+          <ul>
+            <li><i class="fas fa-star"></i> EXP: 10–25 <strong>(100%)</strong></li>
+          </ul>
+        </div>
+        <div class="mob-abilities">
+          Abilità:
+          <ul>
+            <li>🗣️ "Ti sto appiccicando il Covid" (quando inizia il combattimento)</li>
+            <li>🗣️ "<em>&lt;Nome del player&gt;</em>, ora hai il covid" (quando uccide un player)</li>
+          </ul>
+        </div>
 
-<div class="mob-card">
-  <div class="mob-icon"><i class="fas fa-music"></i></div>
-  <div class="mob-details">
-    <div class="mob-name">§e§lTrapperino</div>
-    <div class="mob-desc">
-      Un Piglin Brute travestito da player, con la testa di Darkitect. Ama la musica a tutto volume e attacca con la forza della trap. Scappa quando è ferito!
-    </div>
-    <div class="mob-stats">
-      <div class="stat-item">Vita: 16</div>
-      <div class="stat-item">Danno: 5</div>
-      <div class="stat-item">Velocità: 0.25</div>
-    </div>
-    <div class="mob-drop">
-      Drop:
-      <ul>
-        <li>🎵 NOTE_BLOCK - “Cassa del cazzo del Trapper” <strong>(100%)</strong></li>
-        <li><i class="fas fa-star"></i> EXP: 10–25 <strong>(100%)</strong></li>
-      </ul>
-    </div>
-    <div class="mob-abilities">
-      Abilità:
-      <ul>
-        <li>🗣️ "Ti faccio esplodere le orecchie con la musica del trapping!!" (quando entra in combattimento)</li>
-        <li>🎭 Disguise: si presenta come il player <code>Not Darkitect</code> con skin Darkitect</li>
-        <li>🏃 Scappa, si guarda intorno e svuota la mano sotto il 20% di vita</li>
-      </ul>
+        <div class="mob-download" style="margin-top: 10px;">
+          <a href="mobs/Covid.yml" download>
+            📄 Scarica mob versione YML
+          </a>
+        </div>
+      </div>
     </div>
 
-    <div class="mob-download" style="margin-top: 10px;">
-      <a href="mobs/Trapperino.yml" download>
-        📄 Scarica mob versione YML
-      </a>
-    </div>
-  </div>
-</div>
+    <div class="mob-card">
+      <div class="mob-icon"><i class="fas fa-music"></i></div>
+      <div class="mob-details">
+        <div class="mob-name">§e§lTrapperino</div>
+        <div class="mob-desc">
+          Un Piglin Brute travestito da player, con la testa di Darkitect. Ama la musica a tutto volume e attacca con la
+          forza della trap. Scappa quando è ferito!
+        </div>
+        <div class="mob-stats">
+          <div class="stat-item">Vita: 16</div>
+          <div class="stat-item">Danno: 5</div>
+          <div class="stat-item">Velocità: 0.25</div>
+        </div>
+        <div class="mob-drop">
+          Drop:
+          <ul>
+            <li>🎵 NOTE_BLOCK - “Cassa del cazzo del Trapper” <strong>(100%)</strong></li>
+            <li><i class="fas fa-star"></i> EXP: 10–25 <strong>(100%)</strong></li>
+          </ul>
+        </div>
+        <div class="mob-abilities">
+          Abilità:
+          <ul>
+            <li>🗣️ "Ti faccio esplodere le orecchie con la musica del trapping!!" (quando entra in combattimento)</li>
+            <li>🎭 Disguise: si presenta come il player <code>Not Darkitect</code> con skin Darkitect</li>
+            <li>🏃 Scappa, si guarda intorno e svuota la mano sotto il 20% di vita</li>
+          </ul>
+        </div>
 
-<div class="mob-card">
-  <div class="mob-icon"><i class="fas fa-pizza-slice"></i></div>
-  <div class="mob-details">
-    <div class="mob-name">§c§lPronto Pizza - Marco Cassese</div>
-    <div class="mob-desc">
-      Il capo pizzaiolo sottopagato, armato di balestra. Grida frasi demoralizzanti e fa scappare i dipendenti con la paga minima.
+        <div class="mob-download" style="margin-top: 10px;">
+          <a href="mobs/Trapperino.yml" download>
+            📄 Scarica mob versione YML
+          </a>
+        </div>
+      </div>
     </div>
-    <div class="mob-stats">
-      <div class="stat-item">Vita: 20</div>
-      <div class="stat-item">Danno: ✶ ranged (freccia)</div>
-      <div class="stat-item">Velocità: Media</div>
+
+    <div class="protected">
+      <div class="mob-card">
+        <div class="mob-icon"><i class="fas fa-pizza-slice"></i></div>
+        <div class="mob-details">
+          <div class="mob-name">§c§lPronto Pizza - Marco Cassese</div>
+          <div class="mob-desc">
+            Il capo pizzaiolo sottopagato, armato di balestra. Grida frasi demoralizzanti e fa scappare i dipendenti con
+            la paga minima.
+          </div>
+          <div class="mob-stats">
+            <div class="stat-item">Vita: 20</div>
+            <div class="stat-item">Danno: ✶ ranged (freccia)</div>
+            <div class="stat-item">Velocità: Media</div>
+          </div>
+          <div class="mob-drop">
+            Drop:
+            <ul>
+              <li>🌻 Pizza ai tarzanalli (Sunflower) <strong>(100%)</strong></li>
+              <li>🏹 Arco <strong>(50%)</strong></li>
+              <li>🪶 Frecce (5–10) <strong>(50%)</strong></li>
+              <li>✨ EXP: 10–25 <strong>(100%)</strong></li>
+            </ul>
+          </div>
+          <div class="mob-abilities">
+            Abilità:
+            <ul>
+              <li>🗣️ "Ce l'hai flosscio <em>nome</em>??"</li>
+              <li>🗣️ "Non ti pago più di 6 euro l'ora!" (al kill)</li>
+              <li>🏃 Fugge sotto il 20% di vita</li>
+            </ul>
+          </div>
+          <div class="mob-download" style="margin-top: 10px;">
+            <a href="mobs/FazioneProntoPizza.yml" download>
+              📄 Scarica mob versione YML
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="mob-drop">
-      Drop:
-      <ul>
-        <li>🌻 Pizza ai tarzanalli (Sunflower) <strong>(100%)</strong> [TODO: sostituire con disco]</li>
-        <li>🏹 Arco <strong>(50%)</strong></li>
-        <li>🪶 Frecce (5–10) <strong>(50%)</strong></li>
-        <li>✨ EXP: 10–25 <strong>(100%)</strong></li>
-      </ul>
+
+    <div class="protected">
+      <div class="mob-card protected">
+        <div class="mob-icon"><i class="fas fa-bread-slice"></i></div>
+        <div class="mob-details">
+          <div class="mob-name">§c§lPronto Pizza - Marisa</div>
+          <div class="mob-desc">
+            Pizzaiola esperta e brutale. Colpisce corpo a corpo, ma se sente l’odore del pericolo usa anche armi a
+            distanza.
+          </div>
+          <div class="mob-stats">
+            <div class="stat-item">Vita: 20</div>
+            <div class="stat-item">Danno: ⚔️ corpo a corpo / ranged</div>
+            <div class="stat-item">Velocità: Media</div>
+          </div>
+          <div class="mob-drop">
+            Drop:
+            <ul>
+              <li>🗡️ Spada di ferro <strong>(20%)</strong></li>
+              <li>✨ EXP: 10–25 <strong>(100%)</strong></li>
+            </ul>
+          </div>
+          <div class="mob-abilities">
+            Abilità:
+            <ul>
+              <li>🗣️ "Consegna guaglione"</li>
+              <li>🏃 Fugge sotto il 20% di vita</li>
+            </ul>
+          </div>
+          <div class="mob-download" style="margin-top: 10px;">
+            <a href="mobs/FazioneProntoPizza.yml" download>
+              📄 Scarica mob versione YML
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="mob-abilities">
-      Abilità:
-      <ul>
-        <li>🗣️ "Ce l'hai flosscio <em>nome</em>??"</li>
-        <li>🗣️ "Non ti pago più di 6 euro l'ora!" (al kill)</li>
-        <li>🏃 Fugge sotto il 20% di vita</li>
-      </ul>
+
+    <div class="protected">
+      <div class="mob-card protected">
+        <div class="mob-icon"><i class="fas fa-hamburger"></i></div>
+        <div class="mob-details">
+          <div class="mob-name">§c§lPronto Pizza - Nello</div>
+          <div class="mob-desc">
+            Il veterano del forno: parla in dialetto e picchia forte. Quando è ferito, fugge a gambe levate. Disguise
+            pieno di dettagli.
+          </div>
+          <div class="mob-stats">
+            <div class="stat-item">Vita: 20</div>
+            <div class="stat-item">Danno: ⚔️ corpo a corpo / ranged (basso)</div>
+            <div class="stat-item">Velocità: Media</div>
+          </div>
+          <div class="mob-drop">
+            Drop:
+            <ul>
+              <li>🗡️ Spada di ferro <strong>(20%)</strong></li>
+              <li>✨ EXP: 10–25 <strong>(100%)</strong></li>
+            </ul>
+          </div>
+          <div class="mob-abilities">
+            Abilità:
+            <ul>
+              <li>🗣️ "Quann ij er giofan' faticav' assai"</li>
+              <li>🧍‍♂️ Disguise complesso: Sneaking, Sprinting, Invisibile=false</li>
+              <li>🏃 Fugge sotto il 20% di vita</li>
+            </ul>
+          </div>
+          <div class="mob-download" style="margin-top: 10px;">
+            <a href="mobs/FazioneProntoPizza.yml" download>
+              📄 Scarica mob versione YML
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="mob-download" style="margin-top: 10px;">
-      <a href="mobs/FazioneProntoPizza.yml" download>
-        📄 Scarica mob versione YML
-      </a>
+
+    <div class="mob-card">
+      <div class="mob-icon"><i class="fas fa-user-shield"></i></div>
+      <div class="mob-details">
+        <div class="mob-name">§4§lNapoletano - Soldato</div>
+        <div class="mob-desc">
+          Un napoletano di pattuglia, ben protetto e armato di spada. Colpisce in mischia, silenzioso ma determinato.
+        </div>
+        <div class="mob-stats">
+          <div class="stat-item">Vita: 25</div>
+          <div class="stat-item">Danno: ⚔️ 3 (melee)</div>
+          <div class="stat-item">Armatura: 🛡️ 3</div>
+          <div class="stat-item">Velocità: Bassa</div>
+        </div>
+        <div class="mob-drop">
+          Drop:
+          <ul>
+            <li>✨ EXP: 25–75 <strong>(100%)</strong></li>
+          </ul>
+        </div>
+        <div class="mob-abilities">
+          Abilità:
+          <ul>
+            <li>🗡️ Attacco corpo a corpo</li>
+            <li>🧠 BaseDamage custom (< 90% HP)</li>
+          </ul>
+        </div>
+        <div class="mob-download" style="margin-top: 10px;">
+          <a href="mobs/FazioneNapoletani.yml" download>
+            📄 Scarica mob versione YML
+          </a>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
 
-<div class="mob-card">
-  <div class="mob-icon"><i class="fas fa-bread-slice"></i></div>
-  <div class="mob-details">
-    <div class="mob-name">§c§lPronto Pizza - Marisa</div>
-    <div class="mob-desc">
-      Pizzaiola esperta e brutale. Colpisce corpo a corpo, ma se sente l’odore del pericolo usa anche armi a distanza.
+    <div class="mob-card">
+      <div class="mob-icon"><i class="fas fa-bullseye"></i></div>
+      <div class="mob-details">
+        <div class="mob-name">§4§lNapoletano - Arcere</div>
+        <div class="mob-desc">
+          Un napoletano addestrato al combattimento a distanza. Armato con balestra a ricarica rapida, è preciso e
+          letale.
+        </div>
+        <div class="mob-stats">
+          <div class="stat-item">Vita: 25</div>
+          <div class="stat-item">Danno: ✶ 3 (ranged)</div>
+          <div class="stat-item">Armatura: 🛡️ 3</div>
+          <div class="stat-item">Velocità: Bassa</div>
+        </div>
+        <div class="mob-drop">
+          Drop:
+          <ul>
+            <li>✨ EXP: 25–75 <strong>(100%)</strong></li>
+          </ul>
+        </div>
+        <div class="mob-abilities">
+          Abilità:
+          <ul>
+            <li>🏹 Attacco a distanza (balestra)</li>
+            <li>🧠 BaseDamage custom (< 90% HP)</li>
+          </ul>
+        </div>
+        <div class="mob-download" style="margin-top: 10px;">
+          <a href="mobs/FazioneNapoletani.yml" download>
+            📄 Scarica mob versione YML
+          </a>
+        </div>
+      </div>
     </div>
-    <div class="mob-stats">
-      <div class="stat-item">Vita: 20</div>
-      <div class="stat-item">Danno: ⚔️ corpo a corpo / ranged</div>
-      <div class="stat-item">Velocità: Media</div>
-    </div>
-    <div class="mob-drop">
-      Drop:
-      <ul>
-        <li>🗡️ Spada di ferro <strong>(20%)</strong></li>
-        <li>✨ EXP: 10–25 <strong>(100%)</strong></li>
-      </ul>
-    </div>
-    <div class="mob-abilities">
-      Abilità:
-      <ul>
-        <li>🗣️ "Consegna guaglione"</li>
-        <li>🏃 Fugge sotto il 20% di vita</li>
-      </ul>
-    </div>
-    <div class="mob-download" style="margin-top: 10px;">
-      <a href="mobs/FazioneProntoPizza.yml" download>
-        📄 Scarica mob versione YML
-      </a>
-    </div>
-  </div>
-</div>
 
+    <div class="mob-card">
+      <div class="mob-icon"><i class="fas fa-horse-head"></i></div>
+      <div class="mob-details">
+        <div class="mob-name">§4§lNapoletano - Cavaliere</div>
+        <div class="mob-desc">
+          Un temuto cavaliere napoletano... in groppa a un maiale. Possente, armato e molto più veloce dei suoi
+          colleghi.
+        </div>
+        <div class="mob-stats">
+          <div class="stat-item">Vita: 30</div>
+          <div class="stat-item">Danno: ⚔️ 5 (melee)</div>
+          <div class="stat-item">Armatura: 🛡️ 5</div>
+          <div class="stat-item">Velocità: Medio-alta</div>
+        </div>
+        <div class="mob-drop">
+          Drop:
+          <ul>
+            <li>✨ EXP: 30–80 <strong>(100%)</strong></li>
+          </ul>
+        </div>
+        <div class="mob-abilities">
+          Abilità:
+          <ul>
+            <li>🐖 Montato su maiale (Mount)</li>
+            <li>🧠 BaseDamage custom (< 90% HP)</li>
+            <li>🗡️ Attacco corpo a corpo</li>
+          </ul>
+        </div>
+        <div class="mob-download" style="margin-top: 10px;">
+          <a href="mobs/FazioneNapoletani.yml" download>
+            📄 Scarica mob versione YML
+          </a>
+        </div>
+      </div>
+    </div>
 
-<div class="mob-card">
-  <div class="mob-icon"><i class="fas fa-hamburger"></i></div>
-  <div class="mob-details">
-    <div class="mob-name">§c§lPronto Pizza - Nello</div>
-    <div class="mob-desc">
-      Il veterano del forno: parla in dialetto e picchia forte. Quando è ferito, fugge a gambe levate. Disguise pieno di dettagli.
+    <div class="protected">
+      <div class="mob-card boss">
+        <div class="mob-icon"><i class="fas fa-skull-crossbones"></i></div>
+        <div class="mob-details">
+          <div class="mob-name">§4§lBOSS PATTINICO (v2)</div>
+          <div class="mob-desc">
+            Il boss scheletrico rosa, incarnazione caotica della leggenda di Pattini. Irriverente, violento, e armato...
+            con strumenti impropri.
+          </div>
+          <div class="mob-stats">
+            <div class="stat-item">❤️ Vita: 100</div>
+            <div class="stat-item">🛡️ Armatura: 3</div>
+            <div class="stat-item">⚔️ Danno: 5 (melee)</div>
+            <div class="stat-item">🟣 BossBar: Attiva</div>
+          </div>
+          <div class="mob-drop">
+            Drop:
+            <ul>
+              <li>💎 <strong>Caccola secolare di Pattini</strong> (30%)</li>
+              <li>💀 <strong>Dildo di Pattini</strong> (10%)<br>
+                <em>Le leggende narrano di oscuri pertugi varcati grazie a questo oggetto inestimabile.</em>
+              </li>
+              <li>✨ EXP: 75–125 <strong>(100%)</strong></li>
+            </ul>
+          </div>
+          <div class="mob-abilities">
+            Abilità:
+            <ul>
+              <li>💥 <strong>Esplosione</strong> (ogni 10s se sotto il 60% HP)</li>
+              <li>🗡️ <strong>BaseDamage</strong> (ogni 5s se sotto il 90% HP)</li>
+              <li>🔥 Reagisce in panico se in fiamme</li>
+            </ul>
+          </div>
+          <div class="mob-download" style="margin-top: 10px;">
+            <a href="mobs/BossPattinico.yml" download>
+              📄 Scarica mob versione YML
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="mob-stats">
-      <div class="stat-item">Vita: 20</div>
-      <div class="stat-item">Danno: ⚔️ corpo a corpo / ranged (basso)</div>
-      <div class="stat-item">Velocità: Media</div>
-    </div>
-    <div class="mob-drop">
-      Drop:
-      <ul>
-        <li>🗡️ Spada di ferro <strong>(20%)</strong></li>
-        <li>✨ EXP: 10–25 <strong>(100%)</strong></li>
-      </ul>
-    </div>
-    <div class="mob-abilities">
-      Abilità:
-      <ul>
-        <li>🗣️ "Quann ij er giofan' faticav' assai"</li>
-        <li>🧍‍♂️ Disguise complesso: Sneaking, Sprinting, Invisibile=false</li>
-        <li>🏃 Fugge sotto il 20% di vita</li>
-      </ul>
-    </div>
-    <div class="mob-download" style="margin-top: 10px;">
-      <a href="mobs/FazioneProntoPizza.yml" download>
-        📄 Scarica mob versione YML
-      </a>
-    </div>
-  </div>
-</div>
-
-
-<div class="mob-card">
-  <div class="mob-icon"><i class="fas fa-user-shield"></i></div>
-  <div class="mob-details">
-    <div class="mob-name">§4§lNapoletano - Soldato</div>
-    <div class="mob-desc">
-      Un napoletano di pattuglia, ben protetto e armato di spada. Colpisce in mischia, silenzioso ma determinato.
-    </div>
-    <div class="mob-stats">
-      <div class="stat-item">Vita: 25</div>
-      <div class="stat-item">Danno: ⚔️ 3 (melee)</div>
-      <div class="stat-item">Armatura: 🛡️ 3</div>
-      <div class="stat-item">Velocità: Bassa</div>
-    </div>
-    <div class="mob-drop">
-      Drop:
-      <ul>
-        <li>✨ EXP: 25–75 <strong>(100%)</strong></li>
-      </ul>
-    </div>
-    <div class="mob-abilities">
-      Abilità:
-      <ul>
-        <li>🗡️ Attacco corpo a corpo</li>
-        <li>🧠 BaseDamage custom (< 90% HP)</li>
-      </ul>
-    </div>
-    <div class="mob-download" style="margin-top: 10px;">
-      <a href="mobs/FazioneNapoletani.yml" download>
-        📄 Scarica mob versione YML
-      </a>
-    </div>
-  </div>
-</div>
-
-
-<div class="mob-card">
-  <div class="mob-icon"><i class="fas fa-bullseye"></i></div>
-  <div class="mob-details">
-    <div class="mob-name">§4§lNapoletano - Arcere</div>
-    <div class="mob-desc">
-      Un napoletano addestrato al combattimento a distanza. Armato con balestra a ricarica rapida, è preciso e letale.
-    </div>
-    <div class="mob-stats">
-      <div class="stat-item">Vita: 25</div>
-      <div class="stat-item">Danno: ✶ 3 (ranged)</div>
-      <div class="stat-item">Armatura: 🛡️ 3</div>
-      <div class="stat-item">Velocità: Bassa</div>
-    </div>
-    <div class="mob-drop">
-      Drop:
-      <ul>
-        <li>✨ EXP: 25–75 <strong>(100%)</strong></li>
-      </ul>
-    </div>
-    <div class="mob-abilities">
-      Abilità:
-      <ul>
-        <li>🏹 Attacco a distanza (balestra)</li>
-        <li>🧠 BaseDamage custom (< 90% HP)</li>
-      </ul>
-    </div>
-    <div class="mob-download" style="margin-top: 10px;">
-      <a href="mobs/FazioneNapoletani.yml" download>
-        📄 Scarica mob versione YML
-      </a>
-    </div>
-  </div>
-</div>
-
-<div class="mob-card">
-  <div class="mob-icon"><i class="fas fa-horse-head"></i></div>
-  <div class="mob-details">
-    <div class="mob-name">§4§lNapoletano - Cavaliere</div>
-    <div class="mob-desc">
-      Un temuto cavaliere napoletano... in groppa a un maiale. Possente, armato e molto più veloce dei suoi colleghi.
-    </div>
-    <div class="mob-stats">
-      <div class="stat-item">Vita: 30</div>
-      <div class="stat-item">Danno: ⚔️ 5 (melee)</div>
-      <div class="stat-item">Armatura: 🛡️ 5</div>
-      <div class="stat-item">Velocità: Medio-alta</div>
-    </div>
-    <div class="mob-drop">
-      Drop:
-      <ul>
-        <li>✨ EXP: 30–80 <strong>(100%)</strong></li>
-      </ul>
-    </div>
-    <div class="mob-abilities">
-      Abilità:
-      <ul>
-        <li>🐖 Montato su maiale (Mount)</li>
-        <li>🧠 BaseDamage custom (< 90% HP)</li>
-        <li>🗡️ Attacco corpo a corpo</li>
-      </ul>
-    </div>
-    <div class="mob-download" style="margin-top: 10px;">
-      <a href="mobs/FazioneNapoletani.yml" download>
-        📄 Scarica mob versione YML
-      </a>
-    </div>
-  </div>
-</div>
-
-<div class="mob-card boss">
-  <div class="mob-icon"><i class="fas fa-skull-crossbones"></i></div>
-  <div class="mob-details">
-    <div class="mob-name">§4§lBOSS PATTINICO (v2)</div>
-    <div class="mob-desc">
-      Il boss scheletrico rosa, incarnazione caotica della leggenda di Pattini. Irriverente, violento, e armato... con strumenti impropri.
-    </div>
-    <div class="mob-stats">
-      <div class="stat-item">❤️ Vita: 100</div>
-      <div class="stat-item">🛡️ Armatura: 3</div>
-      <div class="stat-item">⚔️ Danno: 5 (melee)</div>
-      <div class="stat-item">🟣 BossBar: Attiva</div>
-    </div>
-    <div class="mob-drop">
-      Drop:
-      <ul>
-        <li>💎 <strong>Caccola secolare di Pattini</strong> (30%)</li>
-        <li>💀 <strong>Dildo di Pattini</strong> (10%)<br>
-          <em>Le leggende narrano di oscuri pertugi varcati grazie a questo oggetto inestimabile.</em>
-        </li>
-        <li>✨ EXP: 75–125 <strong>(100%)</strong></li>
-      </ul>
-    </div>
-    <div class="mob-abilities">
-      Abilità:
-      <ul>
-        <li>💥 <strong>Esplosione</strong> (ogni 10s se sotto il 60% HP)</li>
-        <li>🗡️ <strong>BaseDamage</strong> (ogni 5s se sotto il 90% HP)</li>
-        <li>🔥 Reagisce in panico se in fiamme</li>
-      </ul>
-    </div>
-    <div class="mob-download" style="margin-top: 10px;">
-      <a href="mobs/BossPattinico.yml" download>
-        📄 Scarica mob versione YML
-      </a>
-    </div>
-  </div>
-</div>
-
 
 
     <div class="back-link" style="margin-top: 40px;">
@@ -484,11 +515,14 @@
     <!-- Social media -->
     <div class="socials" style="margin-top: 30px; text-align:center;">
       <h2>Seguici sui social</h2>
-      <a href="https://www.youtube.com/@nerd_players" target="_blank" aria-label="Youtube"><i class="fab fa-youtube" style="font-size: 28px; margin: 0 10px;"></i></a>
-      <a href="https://discord.com/invite/kbZVz3m" target="_blank" aria-label="Discord"><i class="fab fa-discord" style="font-size: 28px; margin: 0 10px;"></i></a>
+      <a href="https://www.youtube.com/@nerd_players" target="_blank" aria-label="Youtube"><i class="fab fa-youtube"
+          style="font-size: 28px; margin: 0 10px;"></i></a>
+      <a href="https://discord.com/invite/kbZVz3m" target="_blank" aria-label="Discord"><i class="fab fa-discord"
+          style="font-size: 28px; margin: 0 10px;"></i></a>
     </div>
 
   </main>
 
 </body>
+
 </html>

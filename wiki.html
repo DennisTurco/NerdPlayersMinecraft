@@ -5,20 +5,24 @@
 		<link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 		<title>Wiki - NerdPlayers</title>
+    <script src="password.js" defer></script>
 	</head>
 	<body>
     <main>
+
 		<h1>Wiki</h1>
 		<p>
 			This is the wiki of the NerdPlayers custom item set.
 			It lists all custom items, custom projectiles, custom containers, and custom blocks.
 		</p>
+
+    <div id="password-feedback" style="color: red; font-weight: bold; margin-bottom: 10px;"></div>
 		<!-- Wiki Items -->
     <h2 id="items-header">Items</h2>
     <h3 class="item-abstract-category-header">Tools</h3>
     <h4 class="item-category-header">Hoes</h4>
     <ul class="item-list">
-      <li>
+      <li class="protected">
         <a href="items/dildo_di_pattini.html">
           <img src="textures/dildo_di_pattini.png" class="item-icon" />
           Dildo di Pattini
@@ -32,7 +36,7 @@
     <!-- Blocchi -->
     <h2 id="blocks-header">Blocks</h2>
     <ul class="custom-blocks">
-      <li class="custom-block">
+      <li class="custom-block protected">
         <a href="blocks/blocco_di_pattini.html">
           <img src="textures/blocco_di_pattini.png" class="block-icon" />
           blocco_di_pattini
