@@ -1,45 +1,41 @@
-N_SoldatoNapoletano:                             
+N_SoldatoNapoletano:
   Type: PILLAGER
   Display: '&4&lNapoletano - Soldato'
   Health: 25
   Armor: 3
   Damage: 3
   Faction: Napoletani
-  Options:                                     
+  Options:
     Glowing: false
     KnockbackResistance: 0.4
     PreventRandomEquipment: true
     AlwaysShowName: false
     PreventSunburn: true
     MovementSpeed: 0.25
-  Modules:                  
   AIGoalSelectors:
-    - meleeattack 
-    - movetowardstarget 
-    - float      
+    - meleeattack
+    - movetowardstarget
+    - float
     - randomlookaround
-    - lookatplayers                 
+    - lookatplayers
   AITargetSelectors:
     - clear
     - players
     - golems
     - monsters
-  Drops:                                   
-    - exp 25-75 1                         
-  Equipment:                           
+  Drops:
+    - exp 25-75 1
+  Equipment:
     - PLAYER_HEAD{skullOwner=Napoli} HEAD
     - LEATHER_CHESTPLATE{color=CYAN} CHEST
     - LEATHER_LEGGINGS{color=WHITE} LEGS
     - LEATHER_BOOTS{color=CYAN} FEET
     - IRON_SWORD HAND
     - SUNFLOWER{enchants=KNOCKBACK:10} OFFHAND
-  KillMessages:                             
+  KillMessages:
     - '<target.name> è stato derubato da un Napoletano (a te capire come)'
-  LevelModifiers:              
-  Disguise:                           
-  Skills:                                   
-    - BaseDamage{ticks=20 @target ~onAttack <90% 1   
-  Trades:
+  Skills:
+    - BaseDamage{ticks=20} @target ~onAttack <90% 1
 
 N_ArciereNapoletano:
   Type: PILLAGER
@@ -48,40 +44,36 @@ N_ArciereNapoletano:
   Armor: 3
   Damage: 3
   Faction: Napoletani
-  Options:                                     
+  Options:
     Glowing: false
     KnockbackResistance: 0.4
     PreventRandomEquipment: true
     AlwaysShowName: false
     PreventSunburn: true
     MovementSpeed: 0.25
-  Modules:                  
   AIGoalSelectors:
     - arrowattack
     - skeletonbowattack
-    - float      
+    - float
     - randomlookaround
   AITargetSelectors:
     - clear
     - players
     - golems
     - monsters
-  Drops:                                   
-    - exp 25-75 1                         
-  Equipment:                           
+  Drops:
+    - exp 25-75 1
+  Equipment:
     - PLAYER_HEAD{skullOwner=Napoli} HEAD
     - LEATHER_CHESTPLATE{color=CYAN} CHEST
     - LEATHER_LEGGINGS{color=WHITE} LEGS
     - LEATHER_BOOTS{color=CYAN} FEET
     - CROSSBOW{enchants=QUICK_CHARGE:3} HAND
     - SUNFLOWER{enchants=KNOCKBACK:10} OFFHAND
-  KillMessages:                             
+  KillMessages:
     - '<target.name> è stato derubato da un Napoletano (a te capire come)'
-  LevelModifiers:              
-  Disguise:                           
-  Skills:                                   
-    - BaseDamage{ticks=20 @target ~onAttack <90% 1   
-  Trades:
+  Skills:
+    - BaseDamage{ticks=20} @target ~onAttack <90% 1
 
 N_CavaliereNapoletano:
   Type: PILLAGER
@@ -91,7 +83,7 @@ N_CavaliereNapoletano:
   Damage: 5
   Mount: PIG
   Faction: Napoletani
-  Options:                                     
+  Options:
     Glowing: false
     KnockbackResistance: 0.5
     PreventRandomEquipment: true
@@ -99,29 +91,26 @@ N_CavaliereNapoletano:
     PreventSunburn: true
     MovementSpeed: 0.3
   AIGoalSelectors:
-    - meleeattack 
-    - movetowardstarget 
-    - float      
+    - meleeattack
+    - movetowardstarget
+    - float
     - randomlookaround
-    - lookatplayers                 
+    - lookatplayers
   AITargetSelectors:
     - clear
     - players
     - golems
     - monsters
-  Drops:                                   
-    - exp 30-80 1                         
-  Equipment:                                                     
+  Drops:
+    - exp 30-80 1
+  Equipment:
     - PLAYER_HEAD{skullOwner=Napoli} HEAD
     - LEATHER_CHESTPLATE{color=CYAN} CHEST
     - LEATHER_LEGGINGS{color=WHITE} LEGS
     - LEATHER_BOOTS{color=CYAN} FEET
     - IRON_SWORD HAND
     - SUNFLOWER{enchants=KNOCKBACK:10} OFFHAND
-  KillMessages:                             
+  KillMessages:
     - '<target.name> è stato derubato da un feroce Cavaliere Napoletano!'
-  LevelModifiers:              
-  Disguise:                           
-  Skills:                                   
-    - BaseDamage{ticks=20 @target ~onAttack <90% 1   
-  Trades:
+  Skills:
+    - BaseDamage{ticks=20} @target ~onAttack <90% 1

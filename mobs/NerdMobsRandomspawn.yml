@@ -1,99 +1,99 @@
 # For more information, check out the plugin manual or join us on Discord:
 # http://www.mythicmobs.net
-#  
+#
 
 # ###################### BOSS
-RandomPattini:
+Random_Pattini:
   MobType: BossPattinico_V2
   Worlds: world
-  Chance: 0.005
   Priority: 1
+  Chance: 0.005
   Action: REPLACE
   Conditions:
   - inblock{b=water} false
   - outside true
-RandomDona:
+Random_Dona:
   MobType: Dona31
   Worlds: world
-  Chance: 0.005
   Priority: 1
+  Chance: 0.005
   Action: REPLACE
   Conditions:
   - inblock{b=water} false
   - outside true
 
 # ###################### SINGLE ENEMY
-RandomTrapperino:
+Random_Trapperino:
   MobType: Trapperino
   Worlds: world
-  Chance: 0.1
   Priority: 1
+  Chance: 0.1
   Action: REPLACE
   Conditions:
   - inblock{b=water} false
 
-RandomCovid:
+Random_Covid:
   MobType: Covid
   Worlds: world
-  Chance: 0.1
   Priority: 1
+  Chance: 0.1
   Action: REPLACE
   Conditions:
   - inblock{b=water} false
 
 
 # ###################### FACTION
-RandomMarcoCassese:
+Random_MarcoCassese:
   MobType: PP_MarcoCassese
   Worlds: world
-  Chance: 0.02
   Priority: 1
+  Chance: 0.02
   Action: REPLACE
   Conditions:
   - inblock{b=water} false
   - outside true
-RandomMarisa:
+Random_Marisa:
   MobType: PP_Marisa
   Worlds: world
-  Chance: 0.02
   Priority: 1
+  Chance: 0.02
   Action: REPLACE
   Conditions:
   - inblock{b=water} false
   - outside true
-RandomNello:
+Random_Nello:
   MobType: PP_Nello
   Worlds: world
-  Chance: 0.02
   Priority: 1
+  Chance: 0.02
   Action: REPLACE
   Conditions:
   - inblock{b=water} false
   - outside true
 
-RandomSoldatoNapoletano:
+Random_SoldatoNapoletano:
   MobType: N_SoldatoNapoletano
   Worlds: world
-  Chance: 0.02
   Priority: 1
+  Chance: 0.02
   Action: REPLACE
   Conditions:
   - inblock{b=water} false
   - outside true
-RandomArciereNapoletano:
+Random_ArciereNapoletano:
   MobType: N_ArciereNapoletano
   Worlds: world
-  Chance: 0.02
   Priority: 1
+  Chance: 0.02
   Action: REPLACE
   Conditions:
   - inblock{b=water} false
   - outside true
-RandomCavaliereNapoletano:
+Random_CavaliereNapoletano:
   MobType: N_CavaliereNapoletano
   Worlds: world
-  Chance: 0.02
   Priority: 1
+  Chance: 0.02
   Action: REPLACE
   Conditions:
   - inblock{b=water} false

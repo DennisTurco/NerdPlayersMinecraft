@@ -1,10 +1,10 @@
-BossPattinico_V2:                             
+BossPattinico_V2:
   Type: SKELETON
   Display: '&4&lBOSS PATTINICO'
   Health: 100
   Armor: 3
   Damage: 5
-  BossBar:                                      
+  BossBar:
     Enabled: true
     Title: '&4&lBOSS PATTINICO (v2)'
     Range: 30
@@ -12,43 +12,45 @@ BossPattinico_V2:
     Style: SOLID
   Faction: Armata_Pattinica
   Mount:
-  Options:                                     
+  Options:
     Glowing: true
     KnockbackResistance: 0.2
     PreventRandomEquipment: true
     AlwaysShowName: true
     PreventSunburn: true
   Modules:
-   ImmunityTable: true                     
+   ImmunityTable: true
   AIGoalSelectors:
+    - clear
     - meleeattack
-    - clear  
-    - float      
+    - float
     - randomlookaround
-    - lookatplayers                 
+    - lookatplayers
     - panicWhenOnFire
   AITargetSelectors:
+    - clear
+    - attacker
     - players
-    - golems                         
-  Drops:                                   
+    - golems
+  Drops:
     - DIAMOND{display="Caccola secolare di Pattini"} 1to2 0.3
     - STICK{name="&d&oDildo di &5&l&oPATTINI&d (v2)";lore="","&7&oLe &f&oleggende &7&onarrano di quanti oscuri &f&opertugi","&7&osiano stati &f&ovarcati &7&ograzie a questo &f&oinestimabile","&7&ooggetto.","";enchants=KNOCKBACK:255} 1 0.1
     - exp 75-125 1
-  DamageModifiers:                            
-  Equipment:                           
+  DamageModifiers:
+  Equipment:
     - PLAYER_HEAD{skullOwner=Pattini} HEAD
     - LEATHER_CHESTPLATE{color=PINK} CHEST
     - LEATHER_LEGGINGS{color=PINK} LEGS
     - LEATHER_BOOTS{color=PINK} FEET
     - STICK{enchants=KNOCKBACK:10} HAND
     - STICK{enchants=KNOCKBACK:10} OFFHAND
-  KillMessages:                             
+  KillMessages:
     - '<target.name> è stato aperto da PATTINI (a te capire come)'
-  LevelModifiers:              
-  Disguise:                           
-  Skills:                                   
+  LevelModifiers:
+  Disguise:
+  Skills:
     - Explosion{ticks=200} @target ~onAttack <60% 0.3
-    - BaseDamage{ticks=100} @target ~onAttack <90% 0.7    
+    - BaseDamage{ticks=100} @target ~onAttack <90% 0.7
   Trades:
 
 

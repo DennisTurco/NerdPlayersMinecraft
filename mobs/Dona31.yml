@@ -1,50 +1,42 @@
-Dona31:                             
+Dona31:
   Type: WITHER_SKELETON
   Display: '&4&lSPIRITO DI DONA31'
   Health: 100
   Armor: 1
   Damage: 0
-  BossBar:                                      
+  BossBar:
     Enabled: true
     Title: '&4&lSPIRITO DI DONA31'
     Range: 30
     Color: PURPLE
     Style: SOLID
   Faction: Donatelli
-  Mount:
-  Options:                                     
+  Options:
     Glowing: true
     KnockbackResistance: 0.2
     PreventRandomEquipment: true
     AlwaysShowName: true
     MovementSpeed: 0.35
-  Modules:                       
-  AIGoalSelectors:      
-    - clear                         
+  AIGoalSelectors:
+    - clear
     - panicWhenOnFire
     - fleeplayers
     - float
-   
-  AITargetSelectors:  
-    - clear                           
-  Drops:                                   
+
+  AITargetSelectors:
+    - clear
+  Drops:
     - EMERALD{display="Smeraldo Donico"} 3to4 0.15
     - PLAYER_HEAD{skullOwner=Dona31;name="Testa di Dona31";lore="Si è una testa, proprio quella di Dona31"} 1 0.5
     - exp 100-150 1
-  DamageModifiers:                            
-  Equipment:                           
+  Equipment:
     - PLAYER_HEAD{skullOwner=Dona31} HEAD
     - CHAINMAIL_CHESTPLATE CHEST
     - CHAINMAIL_LEGGINGS LEGS
     - CHAINMAIL_BOOTS FEET
     - SHIELD HAND
     - SHIELD OFFHAND
-  KillMessages:                             
-    - '<target.name> è riusito a morire contro lo spirito di Dona (a te capire come)'
-  LevelModifiers:              
-  Disguise:                           
-  Skills:                                   
-    - Explosion{ticks=200} @target ~onAttack <60% 0.3   
-  Trades:
-
-
+  KillMessages:
+    - '<target.name> è riuscito a morire contro lo spirito di Dona (a te capire come)'
+  Skills:
+    - Explosion{ticks=0} @target ~onAttack <60% 0.3
