@@ -8,7 +8,7 @@
     <script src="password.js" defer></script>
 	</head>
 	<body>
-    <main>
+    <div>
 
 		<h1>Wiki</h1>
 		<p>
@@ -16,37 +16,58 @@
 			It lists all custom items, custom projectiles, custom containers, and custom blocks.
 		</p>
 
+    <main>
     <div id="password-feedback" style="color: red; font-weight: bold; margin-bottom: 10px;"></div>
 		<!-- Wiki Items -->
-    <h2 id="items-header">Items</h2>
-    <h3 class="item-abstract-category-header">Tools</h3>
-    <h4 class="item-category-header">Hoes</h4>
-    <ul class="item-list">
-      <li class="protected">
-        <a href="items/dildo_di_pattini.html">
-          <img src="textures/dildo_di_pattini.png" class="item-icon" />
-          Dildo di Pattini
-        </a>
-      </li>
-    </ul>
+    <h2 id="items-header" >Items</h2>
+		<h3 class="item-category-header" >Simple items</h3>
+		<ul class="item-list" >
+			<li><a href="items/sticcazzo_del_martellazzo.html"><img src="textures/martellazzostick.png" class="item-icon" />Sticcazzo del martellazzo</a></li>
+			<li><a href="items/logazzo.html"><img src="textures/np.png" class="item-icon" />Logazzo NerdPlayers</a></li>
+			<li><a href="items/martellazzo_azzo.html"><img src="textures/martellazzoazzo.png" class="item-icon" />Azzo del martellazzo</a></li>
+      <div class="protected">
+        <li><a href="items/colpo_pattinico.html"><img src="textures/proiettile_pattini.png" class="item-icon" />Colpo Pattinico</a></li>
+      </div>
+		</ul>
+		<h3 class="item-abstract-category-header">Tools</h3>
+		<h4 class="item-category-header" >Pickaxes</h4>
+		<ul class="item-list" >
+			<li><a href="items/hammerone_potente.html"><img src="textures/hammerozzo.png" class="item-icon" />Hammerone Potente</a></li>
+			<li><a href="items/hammerone_potente_grosso.html"><img src="textures/big_martellazzo.png" class="item-icon" />Big Martellazzo Pazzo</a></li>
+		</ul>
+		<h4 class="item-category-header" >Hoes</h4>
+    <div class="protected">
+		<ul class="item-list" >
+			<li><a href="items/dildo_di_pattini.html"><img src="textures/dildo_di_pattini.png" class="item-icon" />Dildo di Pattini</a></li>
+		</ul>
+    </div>
+		<h3 class="item-abstract-category-header">Weapons</h3>
+		<h4 class="item-category-header" >Guns</h4>
+    <div class="protected">
+		<ul class="item-list" >
+			<li><a href="items/spara_pattini.html"><img src="textures/pattinigun.png" class="item-icon" />Spara Pattini</a></li>
+		</ul>
+  </div>
 
-    <h3 class="item-abstract-category-header">Weapons</h3>
-    <h3 class="item-abstract-category-header">Armor</h3>
-
-    <!-- Blocchi -->
-    <h2 id="blocks-header">Blocks</h2>
-    <ul class="custom-blocks">
-      <li class="custom-block protected">
-        <a href="blocks/blocco_di_pattini.html">
-          <img src="textures/blocco_di_pattini.png" class="block-icon" />
-          blocco_di_pattini
-        </a>
-      </li>
-    </ul>
-
+    <div class="protected">
+      <h3 class="item-abstract-category-header">Armor</h3>
+      <h2 id="blocks-header">Blocks</h2>
+      <ul class="custom-blocks">
+        <li class="custom-block"><a href="blocks/blocco_di_pattini.html"><img src="textures/blocco_di_pattini.png" class="block-icon" />blocco_di_pattini</a></li>
+      </ul>
+    </div>
     <div class="back-link">
       <a href="index.html"><i class="fas fa-arrow-left"></i> Torna alla Home</a>
     </div>
+
+
+    <!-- Social media -->
+    <div class="socials">
+      <h2>Seguici sui social</h2>
+      <a href="https://www.youtube.com/@nerd_players" target="_blank" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+      <a href="https://discord.com/invite/kbZVz3m" target="_blank" aria-label="Discord"><i class="fab fa-discord"></i></a>
+    </div>
+
     </main>
 	</body>
 </html>

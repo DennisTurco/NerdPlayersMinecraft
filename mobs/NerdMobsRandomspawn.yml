@@ -27,7 +27,7 @@ Random_Trapperino:
   MobType: Trapperino
   Worlds: world
   Priority: 1
-  Chance: 0.1
+  Chance: 0.05
   Action: REPLACE
   Conditions:
   - inblock{b=water} false
@@ -36,7 +36,7 @@ Random_Covid:
   MobType: Covid
   Worlds: world
   Priority: 1
-  Chance: 0.1
+  Chance: 0.05
   Action: REPLACE
   Conditions:
   - inblock{b=water} false
@@ -47,7 +47,7 @@ Random_MarcoCassese:
   MobType: PP_MarcoCassese
   Worlds: world
   Priority: 1
-  Chance: 0.02
+  Chance: 0.01
   Action: REPLACE
   Conditions:
   - inblock{b=water} false
@@ -56,45 +56,45 @@ Random_Marisa:
   MobType: PP_Marisa
   Worlds: world
   Priority: 1
-  Chance: 0.02
+  Chance: 0.01
   Action: REPLACE
   Conditions:
   - inblock{b=water} false
   - outside true
-Random_Nello:
-  MobType: PP_Nello
-  Worlds: world
-  Priority: 1
-  Chance: 0.02
-  Action: REPLACE
-  Conditions:
-  - inblock{b=water} false
-  - outside true
+# Random_Nello:
+#   MobType: PP_Nello
+#   Worlds: world
+#   Priority: 1
+#   Chance: 0.02
+#   Action: REPLACE
+#   Conditions:
+#   - inblock{b=water} false
+#   - outside true
 
-Random_SoldatoNapoletano:
-  MobType: N_SoldatoNapoletano
-  Worlds: world
-  Priority: 1
-  Chance: 0.02
-  Action: REPLACE
-  Conditions:
-  - inblock{b=water} false
-  - outside true
-Random_ArciereNapoletano:
-  MobType: N_ArciereNapoletano
-  Worlds: world
-  Priority: 1
-  Chance: 0.02
-  Action: REPLACE
-  Conditions:
-  - inblock{b=water} false
-  - outside true
-Random_CavaliereNapoletano:
-  MobType: N_CavaliereNapoletano
-  Worlds: world
-  Priority: 1
-  Chance: 0.02
-  Action: REPLACE
-  Conditions:
-  - inblock{b=water} false
-  - outside true
+# Random_SoldatoNapoletano:
+#   MobType: N_SoldatoNapoletano
+#   Worlds: world
+#   Priority: 1
+#   Chance: 0.02
+#   Action: REPLACE
+#   Conditions:
+#   - inblock{b=water} false
+#   - outside true
+# Random_ArciereNapoletano:
+#   MobType: N_ArciereNapoletano
+#   Worlds: world
+#   Priority: 1
+#   Chance: 0.02
+#   Action: REPLACE
+#   Conditions:
+#   - inblock{b=water} false
+#   - outside true
+# Random_CavaliereNapoletano:
+#   MobType: N_CavaliereNapoletano
+#   Worlds: world
+#   Priority: 1
+#   Chance: 0.02
+#   Action: REPLACE
+#   Conditions:
+#   - inblock{b=water} false
+#   - outside true

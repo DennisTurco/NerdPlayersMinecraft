@@ -43,8 +43,8 @@ Trapperino:
     Type: player
     Skin: Darkitect
   Skills:
-    - speak{m="Ti faccio esplodere le orecchie con la musica del trapping!!";cooldown=20} @PlayersInRadius{r=40} ~onCombat >0 0.2
+    - speak{m="Ti faccio esplodere le orecchie con la musica del trapping!!"} @PlayersInRadius{r=40} ~onSpawn 1
+    - playsound{sound=BLOCK_NOTE_BLOCK_HARP;volume=1;pitch=1} @PlayersInRadius{r=30} ~onSpawn 1
     - modifyai{goalSelectors=[panicWhenOnFire, float, randomlookaround];targetSelectors=[clear]} @self <20% 1
     - equipment{slot=HAND,item=AIR} @self ~onDamaged <20% 1
     - DropItem{item=JUKEBOX} @self ~onDamaged <20% 1
-    - playsound{sound=BLOCK_NOTE_BLOCK_HARP;volume=1;pitch=1} @PlayersInRadius{r=30}
