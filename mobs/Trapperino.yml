@@ -32,19 +32,25 @@ Trapperino:
     - golems
     - monsters
   Drops:
-    - NOTE_BLOCK{name="Cassa del cazzo del Trapper";flags=HIDE_ENCHANTS;enchants=UNBREAKING:1} 1to1 1
+    - NOTE_BLOCK{
+        name="&cCassa del cazzo del &4Trapper";
+        lore=[&5Madonna che fastidio!,
+          &5Come si spegne sta cassa di merda!?,
+          &5&o(Vendibile allo shop)
+        ];
+        flags=HIDE_ENCHANTS;enchants=UNBREAKING:10
+      } 1to1 0.3
     - exp 10-25 1
   Equipment:
     - PLAYER_HEAD{skullTexture=eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDdkODkwMTk1ZjU1ZDEwY2VlOTY0ODZhYjc2NjI0M2E3MmFjM2EwM2QwNDQ1ZTFiMDNjMjlmZWIxZjBlNTJkNSJ9fX0=} HEAD
-    - JUKEBOX{enchants=KNOCKBACK:1} HAND
+    - JUKEBOX HAND
   KillMessages:
     - '<target.name> è stato trepperato (purtroppo....)'
   Disguise:
     Type: player
     Skin: Darkitect
   Skills:
-    - speak{m="Ti faccio esplodere le orecchie con la musica del trapping!!"} @PlayersInRadius{r=40} ~onSpawn 1
+    #- speak{m="Ti faccio esplodere le orecchie con la musica del trapping!!"} @PlayersInRadius{r=40} ~onSpawn 1
     - playsound{sound=BLOCK_NOTE_BLOCK_HARP;volume=1;pitch=1} @PlayersInRadius{r=30} ~onSpawn 1
     - modifyai{goalSelectors=[panicWhenOnFire, float, randomlookaround];targetSelectors=[clear]} @self <20% 1
     - equipment{slot=HAND,item=AIR} @self ~onDamaged <20% 1
-    - DropItem{item=JUKEBOX} @self ~onDamaged <20% 1

@@ -34,5 +34,6 @@ Covid:
   KillMessages:
     - '<target.name> è stato incoviddato'
   Skills:
-    - speak{m="Ti sto appiccicando il Covid";cooldown=20} @PlayersInRadius{r=40} ~onCombat >0 0.2
-    - speak{m="<trigger.name>, ora hai il covid";cooldown=60} @PlayersInRadius{r=40} ~onPlayerKill
+  # - message{m="&e[Covid]&7 Ti sto appiccicando il Covid"} @PlayersInRadius{r=10} ~onCombat 0.3
+  # - message{m="&e[Covid]&7 Ti ho passato il covid, che peccato."}} @PlayersInRadius{r=10} ~onPlayerKill 1 cooldown=120
+  # solo per versione prenium - playsound{sound=entity.bee.hurt;volume=1;pitch=2} @PlayersInRadius{r=10}

@@ -61,15 +61,15 @@ Random_Marisa:
   Conditions:
   - inblock{b=water} false
   - outside true
-# Random_Nello:
-#   MobType: PP_Nello
-#   Worlds: world
-#   Priority: 1
-#   Chance: 0.02
-#   Action: REPLACE
-#   Conditions:
-#   - inblock{b=water} false
-#   - outside true
+Random_Nello:
+  MobType: PP_Nello
+  Worlds: world
+  Priority: 1
+  Chance: 0.02
+  Action: REPLACE
+  Conditions:
+  - inblock{b=water} false
+  - outside true
 
 # Random_SoldatoNapoletano:
 #   MobType: N_SoldatoNapoletano
