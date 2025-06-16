@@ -1,32 +1,40 @@
 Pinder:
-  Type: VILLAGER
+  Type: ZOMBIE
   Display: '&fPinder'
   Health: 150
   Damage: 8
   Armor: 4
   Options:
     PreventOtherDrops: true
+    Despawn: true
+    PreventSunburn: true
+    PreventItemPickup: true
+    PreventRandomEquipment: false
     AlwaysShowName: true
     Silent: false
     NoAI: false
     KnockbackResistance: 0.3
   AIGoalSelectors:
-    - 0 clear
-    - 1 meleeattack
-    - 2 randomstroll
-    - 3 lookatplayers
+    - panicWhenOnFire
+    - meleeattack
+    - randomstroll
+    - opendoors
+    - closedoors
+    - lookatplayers
   Skills:
     - skill{s=SheepStrike} @LivingEntitiesInRadius{r=10}
     - skill{s=HealWithHay} ~onDamaged
     - skill{s=PinderTalk} ~onTimer:100
+    - skill{s=SmashAttack} @target 0.2
   Equipment:
     - STICK HAND
-Drops:
-    #- GOLD_NUGGET enchant=UNBREAKING:10 name="&dPinderite" lore="&7Una gemma rara che brilla di saggezza.":1
-    - GOLD_NUGGET{enchant=UNBREAKING:10;name="&ddPinderite";lore="","&7Una gemma rara che brilla di saggezza.","","&5&o(Vendibile allo shop)"} 1to4 0.2
-    #- ENCHANTED_BOOK enchant=UNBREAKING:10 name="&4Death Note" lore="&8Contiene i nomi dei suoi nemici":1
-    - ENCHANTED_BOOK{enchant=UNBREAKING:10;name="&4Death Note";lore="","&8Contiene i nomi dei suoi nemici.","","&5&o(Vendibile allo shop)"} 1to1 0.2
-    #- STICK enchant=UNBREAKING:10 name="&5Pindella" lore="&o&7Lo strumento leggendario del pastore.":0.5
-    - STICK{enchant=UNBREAKING:10;name="&5Pindella";lore="","&o&7Lo strumento leggendario del pastore.","","&5&o(Vendibile allo shop)"} 1to1 0.5
-Modules:
-  ThreatTable: true
+  Disguise:
+    Type: player
+    Skin: tchskk
+  Drops:
+      - Pinderite 1to4 0.2
+      - DeathNote 1to1 0.2
+      - Pindella 1to1 0.5
+      - exp 10-25 1
+  Modules:
+    ThreatTable: true

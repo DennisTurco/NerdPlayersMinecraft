@@ -22,12 +22,11 @@ Dona31:
     - panicWhenOnFire
     - fleeplayers
     - float
-
   AITargetSelectors:
     - clear
   Drops:
-    - EMERALD{display="Smeraldo Donico"} 3to4 0.15
-    - PLAYER_HEAD{skullOwner=Dona31;name="Testa di Dona31";lore="Si è una testa, proprio quella di Dona31"} 1 0.5
+    - SmeraldoDonico 3to4 0.15
+    - TestaDiDona 1 0.5
     - exp 100-150 1
   Equipment:
     - PLAYER_HEAD{skullOwner=Dona31} HEAD

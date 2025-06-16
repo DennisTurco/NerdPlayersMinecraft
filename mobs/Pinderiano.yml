@@ -7,5 +7,6 @@ Pinderiano:
     Silent: true
     NoAI: false
   Skills:
-    - effect:particles{p=flame;amount=5} @self
-    - explosion{power=2;fire=false;break=false} @self
+  - effect:particles{p=flame;amount=5;speed=0.1;amount=10} @Self ~onTimer:10
+  - skill{s=PinderianoExplode} ~onEnterRadius{r=2;cooldown=999;target=Players}
+  - skill{s=PinderianoExplode} ~onTimer:80

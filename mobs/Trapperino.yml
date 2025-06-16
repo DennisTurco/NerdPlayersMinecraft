@@ -32,15 +32,7 @@ Trapperino:
     - golems
     - monsters
   Drops:
-    - NOTE_BLOCK{
-        name="&cCassa del cazzo del &4Trapper";
-        lore=[&5Madonna che fastidio!,
-          &5Come si spegne sta cassa di merda!?,
-          &5&o(Vendibile allo shop)
-        ];
-        flags=HIDE_ENCHANTS;enchants=UNBREAKING:10
-      } 1to1 0.3
-    - NOTE_BLOCK{enchant=UNBREAKING:10;name="&cCassa del cazzo del &4Trapper";lore="","&5Madonna che fastidio!","&5Come si spegne sta cassa di merda!?","","&5&o(Vendibile allo shop)"} 1to1 0.3
+    - CassaDelTrapper 1to1 0.3
     - exp 10-25 1
   Equipment:
     - PLAYER_HEAD{skullTexture=eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDdkODkwMTk1ZjU1ZDEwY2VlOTY0ODZhYjc2NjI0M2E3MmFjM2EwM2QwNDQ1ZTFiMDNjMjlmZWIxZjBlNTJkNSJ9fX0=} HEAD

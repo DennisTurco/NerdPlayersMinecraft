@@ -71,6 +71,18 @@ Random_Nello:
   - inblock{b=water} false
   - outside true
 
+# ###################### PINDER
+
+Random_Pinder:
+  MobType: Pinder
+  Worlds: world
+  Priority: 1
+  Chance: 0.05
+  Action: REPLACE
+  Conditions:
+  - inblock{b=water} false
+  - outside true
+
 # Random_SoldatoNapoletano:
 #   MobType: N_SoldatoNapoletano
 #   Worlds: world

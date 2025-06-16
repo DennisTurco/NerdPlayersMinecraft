@@ -33,12 +33,12 @@ BossPattinico_V2:
     - players
     - golems
   Drops:
-    - DIAMOND{display="Caccola secolare di Pattini"} 1to2 0.3
-    - STICK{name="&d&oDildo di &5&l&oPATTINI&d (v2)";lore="","&7&oLe &f&oleggende &7&onarrano di quanti oscuri &f&opertugi","&7&osiano stati &f&ovarcati &7&ograzie a questo &f&oinestimabile","&7&ooggetto.","";enchants=KNOCKBACK:255} 1 0.1
+    - CaccolaPattinica 1to2 0.3
+    - DildoPattinico 1 0.1
     - exp 75-125 1
   DamageModifiers:
   Equipment:
-    - PLAYER_HEAD{skullOwner=Pattini} HEAD
+    #- PLAYER_HEAD{skullOwner=Pattini} HEAD
     - LEATHER_CHESTPLATE{color=PINK} CHEST
     - LEATHER_LEGGINGS{color=PINK} LEGS
     - LEATHER_BOOTS{color=PINK} FEET

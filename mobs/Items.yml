@@ -1,0 +1,115 @@
+Pinderite:
+  Id: GOLD_NUGGET
+  Display: '&bPinderite'
+  Lore:
+  - ''
+  - '&5Una gemma rara che brilla di saggezza.'
+  - ''
+  - '&o&5(Vendibile allo shop)'
+  Enchantments:
+  - UNBREAKING:10
+  Hide:
+  - ENCHANTS
+
+DeathNote:
+  Id: ENCHANTED_BOOK
+  Display: '&bDeath Note'
+  Lore:
+  - ''
+  - '&5Contiene i nomi dei suoi nemici.'
+  - ''
+  - '&o&5(Vendibile allo shop)'
+  Enchantments:
+  - UNBREAKING:10
+  Hide:
+  - ENCHANTS
+
+Pindella:
+  Id: STICK
+  Display: '&bPindella'
+  Lore:
+  - ''
+  - '&5Lo strumento leggendario del pastore.'
+  - ''
+  - '&o&5(Vendibile allo shop)'
+  Enchantments:
+  - UNBREAKING:10
+  Hide:
+  - ENCHANTS
+
+CassaDelTrapper:
+  Id: NOTE_BLOCK
+  Display: '&cCassa del cazzo del &4Trapper'
+  Lore:
+  - ''
+  - '&5Madonna che fastidio!'
+  - '&5Come si spegne sta cassa di merda!?'
+  - ''
+  - '&o&5(Vendibile allo shop)'
+  Enchantments:
+  - UNBREAKING:10
+  Hide:
+  - ENCHANTS
+
+PizzaAiTarzanelli:
+  Id: GLISTERING_MELON_SLICE
+  Display: '&bPizza ai tarzanelli'
+  Lore:
+  - ''
+  - '&5Considerala la tua paga per le ore extra'
+  - ''
+  - '&o&5(Vendibile allo shop)'
+  Enchantments:
+  - UNBREAKING:10
+  Hide:
+  - ENCHANTS
+
+
+CaccolaPattinica:
+  Id: DIAMOND
+  Display: '&bCaccola secolare di Pattini'
+  Lore:
+  - ''
+  - '&5È semplicemente una caccola di Pattini'
+  - ''
+  - '&o&5(Vendibile allo shop)'
+  Enchantments:
+  - UNBREAKING:10
+  Hide:
+  - ENCHANTS
+
+DildoPattinico:
+  Id: STICK
+  Display: '&d&oDildo di &5&l&oPATTINI&d'
+  Lore:
+  - ''
+  - '&7&oLe &f&oleggende &7&onarrano di quanti oscuri &f&opertugi'
+  - '&7&osiano stati &f&ovarcati &7&ograzie a questo &f&oinestimabile'
+  - '&7&ooggetto.'
+  - ''
+  Enchantments:
+  - KNOCKBACK:20
+
+SmeraldoDonico:
+  Id: EMERALD
+  Display: '&bSmeraldo Donico'
+  Lore:
+  - ''
+  - '&5Lo smeraldo errante di Dona'
+  - ''
+  Enchantments:
+  - UNBREAKING:10
+  Hide:
+  - ENCHANTS
+
+TestaDiDona:
+  Id: PLAYER_HEAD
+  Display: '&bTesta di Dona31'
+  Lore:
+  - ''
+  - '&5Si è una testa, proprio quella di Dona31'
+  - ''
+  Enchantments:
+  - UNBREAKING:10
+  Hide:
+  - ENCHANTS
