@@ -34,6 +34,7 @@ PP_MarcoCassese:
         ];
         flags=HIDE_ENCHANTS;enchants=UNBREAKING:10
       } 1to3 0.4
+    - GLISTERING_MELON_SLICE{enchant=UNBREAKING:10;name="&bPizza ai tarzanelli";lore="","&5Considerala la tua paga per le ore extra","","&5&o(Vendibile allo shop)"} 1to3 0.4
     - exp 10-25 1
   Equipment:
     - PLAYER_HEAD{skullTexture=eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWFjOTUzNzA2NTgwOWRlZjJkZmI5ZjBlNjkzYTE1YjQxZDcxYzA0Yjk2NDBkYmIzMGEyN2JlZGFhMzg3ZjdmNiJ9fX0=} HEAD

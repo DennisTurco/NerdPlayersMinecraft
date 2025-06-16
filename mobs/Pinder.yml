@@ -20,10 +20,13 @@ Pinder:
     - skill{s=HealWithHay} ~onDamaged
     - skill{s=PinderTalk} ~onTimer:100
   Equipment:
-    - STICK enchant=UNBREAKING:10 name="&5Pindella" lore="&o&7Lo strumento leggendario del pastore."
-  Drops:
-    - GOLD_NUGGET enchant=UNBREAKING:10 name="&dPinderite" lore="&7Una gemma rara che brilla di saggezza.":1
-    - ENCHANTED_BOOK enchant=UNBREAKING:10 name="&4Death Note" lore="&8Contiene i nomi dei suoi nemici":1
-    - STICK enchant=UNBREAKING:10 name="&5Pindella" lore="&o&7Lo strumento leggendario del pastore.":0.5
-  Modules:
-    ThreatTable: true
+    - STICK HAND
+Drops:
+    #- GOLD_NUGGET enchant=UNBREAKING:10 name="&dPinderite" lore="&7Una gemma rara che brilla di saggezza.":1
+    - GOLD_NUGGET{enchant=UNBREAKING:10;name="&ddPinderite";lore="","&7Una gemma rara che brilla di saggezza.","","&5&o(Vendibile allo shop)"} 1to4 0.2
+    #- ENCHANTED_BOOK enchant=UNBREAKING:10 name="&4Death Note" lore="&8Contiene i nomi dei suoi nemici":1
+    - ENCHANTED_BOOK{enchant=UNBREAKING:10;name="&4Death Note";lore="","&8Contiene i nomi dei suoi nemici.","","&5&o(Vendibile allo shop)"} 1to1 0.2
+    #- STICK enchant=UNBREAKING:10 name="&5Pindella" lore="&o&7Lo strumento leggendario del pastore.":0.5
+    - STICK{enchant=UNBREAKING:10;name="&5Pindella";lore="","&o&7Lo strumento leggendario del pastore.","","&5&o(Vendibile allo shop)"} 1to1 0.5
+Modules:
+  ThreatTable: true
