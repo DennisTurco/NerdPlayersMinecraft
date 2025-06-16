@@ -1,0 +1,11 @@
+Pinderiano:
+  Type: SHEEP
+  Display: '&cPinderiano'
+  Health: 1
+  Options:
+    PreventOtherDrops: true
+    Silent: true
+    NoAI: false
+  Skills:
+    - effect:particles{p=flame;amount=5} @self
+    - explosion{power=2;fire=false;break=false} @self

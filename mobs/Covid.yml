@@ -2,7 +2,7 @@ Covid:
   Type: BEE
   Display: '&e&lCovid'
   Health: 2
-  Damage: 8
+  Damage: 4
   Options:
     PreventOtherDrops: true
     Despawn: true
@@ -37,3 +37,7 @@ Covid:
   # - message{m="&e[Covid]&7 Ti sto appiccicando il Covid"} @PlayersInRadius{r=10} ~onCombat 0.3
   # - message{m="&e[Covid]&7 Ti ho passato il covid, che peccato."}} @PlayersInRadius{r=10} ~onPlayerKill 1 cooldown=120
   # solo per versione prenium - playsound{sound=entity.bee.hurt;volume=1;pitch=2} @PlayersInRadius{r=10}
+    - covid_infection @Target ~onAttack 1
+    - covid_spread @Self ~onTimer:120
+    - covid_mutation @Self ~onDamaged 0.3
+    - covid_final_breath @Self ~onDeath 1

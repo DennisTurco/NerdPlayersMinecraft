@@ -1,0 +1,156 @@
+### Skill di Dialogo
+
+PinderTalk:
+  Skills:
+    - message{m="&7[Pinder] &fPinderiani!!, andate ad uccidere questo miscredente!"} @PlayersInRadius{r=15}
+    - delay 60
+    - message{m="&7[Pinder] &fSei stati scomunicato! Creerò un nuovo gruppo senza di te!"} @PlayersInRadius{r=15}
+
+
+
+### Skill di Supporto / Cura
+
+HealWithHay:
+  Conditions:
+    - health{h=<50} true
+  Skills:
+    - effect:particles{p=happy_villager;amount=15} @self
+    - heal{a=15} @self
+
+
+## Skill di Attacco
+
+sheep_strike:
+  Skills:
+    - summon{type=SHEEP_EXPLOSIVE;amount=1;radius=0} @Target
+    - delay 40
+    - explosion{power=2;fire=false;break=false} @Self
+    - effect:particles{p=explosion_large;amount=10;speed=1} @Self
+
+lancio_player:
+  Skills:
+    - throw{velocity=1.4;velocityY=0.9} @Target
+    - effect:particles{p=cloud;a=30;hs=0.3;vs=0.3} @Target
+    - sound{s=entity.iron_golem.attack} @Self
+
+fire_explosion:
+  Skills:
+    - ignite{d=100} @Target
+    - damage{a=4} @Target
+    - effect:particles{p=flame;a=50;hs=0.5;vs=0.5} @Target
+    - sound{s=entity.blaze.shoot} @Self
+
+shockwave_knockback:
+  Skills:
+    - throw{velocity=1.8;velocityY=0.5} @PlayersInRadius{r=6}
+    - effect:particles{p=crit_magic;a=60;hs=0.4;vs=0.4} @Self
+    - sound{s=entity.generic.explode} @Self
+
+
+## Skill Visive / Ambientali
+
+poison_cloud:
+  Skills:
+    - potion{type=POISON;duration=100;level=2} @PlayersInRadius{r=5}
+    - effect:particles{p=spell_mob;a=60;hs=0.4;vs=0.3} @Self
+    - sound{s=entity.witch.throw} @Self
+
+aura_oscura:
+  Skills:
+    - effect:particles{p=reddust;color=3A003A;a=80;hs=0.6;vs=0.3} @Self
+    - effect:sound{s=entity.ender_eye.death} @Self
+
+teletrasporto_random:
+  Skills:
+    - teleport{spreadh=5;spreadv=1} @Self
+    - effect:particles{p=portal;a=40;hs=0.6;vs=0.3} @Self
+    - sound{s=entity.enderman.teleport} @Self
+
+dark_aura_push:
+  Skills:
+    - potion{type=WEAKNESS;duration=100;level=1} @PlayersInRadius{r=6}
+    - throw{velocity=1;velocityY=0.3} @PlayersInRadius{r=6}
+    - effect:particles{p=smoke_large;a=40;hs=0.4;vs=0.2} @Self
+    - sound{s=entity.evoker.prepare_summon} @Self
+
+## Skill Finali / Boss
+
+colpo_finale_boss:
+  Cooldown: 60
+  Skills:
+    - message{m="&4[NOME_MOB] &0... e ora muori!"} @PlayersInRadius{r=30}
+    - potion{type=BLINDNESS;duration=60;level=1} @PlayersInRadius{r=20}
+    - delay 20
+    - damage{a=8} @PlayersInRadius{r=6}
+    - effect:particles{p=explosion_huge;a=3} @Self
+    - sound{s=entity.wither.spawn} @Self
+
+summon_minions_circle:
+  Skills:
+    - summon{type=ZOMBIE;amount=4;radius=3} @Self
+    - effect:particles{p=smoke;a=60;hs=0.5;vs=0.2} @Self
+    - sound{s=entity.zombie.ambient} @Self
+
+blood_rage:
+  Conditions:
+    - health{h=<30} true
+  Skills:
+    - potion{type=INCREASE_DAMAGE;duration=200;level=2} @Self
+    - potion{type=SPEED;duration=200;level=1} @Self
+    - effect:particles{p=reddust;color=AA0000;a=80;hs=0.5;vs=0.3} @Self
+    - sound{s=entity.zombie_villager.converted} @Self
+
+
+## Trapperino
+
+trapper_blast:
+  Skills:
+    #- message{m="&e[Trapperino]&7 OH NO BRO, PRENDI STO DROP!"} @PlayersInRadius{r=15}
+    - throw{velocity=1.5;velocityY=0.6} @PlayersInRadius{r=6}
+    - potion{type=CONFUSION;duration=100;level=1} @PlayersInRadius{r=6}
+    - playsound{sound=BLOCK_NOTE_BLOCK_BASS;volume=3;pitch=0.5} @PlayersInRadius{r=30}
+    - effect:particles{p=note;a=40;hs=0.6;vs=0.3} @self
+
+loop_musica_loop:
+  Cooldown: 10
+  Skills:
+    #- speak{m="Ti faccio esplodere le orecchie con la musica del trapping!!"} @PlayersInRadius{r=40} ~onSpawn 1
+    - playsound{sound=BLOCK_NOTE_BLOCK_SNARE;volume=2;pitch=1.5} @PlayersInRadius{r=20}
+    - playsound{sound=BLOCK_NOTE_BLOCK_BASS;volume=2;pitch=0.8} @PlayersInRadius{r=20}
+    - effect:particles{p=note;a=20;hs=0.5;vs=0.2} @Self
+
+
+## Covid
+
+covid_infection:
+  Cooldown: 20
+  Skills:
+    #- message{m="&e[Covid]&7 Ti sto appiccicando il Covid..."} @Target
+    - potion{type=POISON;duration=40;level=0} @Target
+    - sound{s=entity.bee.sting;volume=1;pitch=1} @Target
+    - effect:particles{p=spell_mob;a=15;hs=0.2;vs=0.2} @Target
+
+covid_spread:
+  Cooldown: 40
+  Skills:
+    #- message{m="&e[Covid]&7 Tossisco su tutti..."} @PlayersInRadius{r=4}
+    - potion{type=WEAKNESS;duration=60;level=0} @PlayersInRadius{r=4}
+    - potion{type=SLOW;duration=60;level=0} @PlayersInRadius{r=4}
+    - effect:particles{p=cloud;a=20;hs=0.4;vs=0.3} @Self
+    - sound{s=entity.pillager.ambient;volume=0.5;pitch=0.8} @PlayersInRadius{r=5}
+
+covid_mutation:
+  Cooldown: 60
+  Skills:
+    #- message{m="&e[Covid]&7 Mi sto evolvendo..."} @PlayersInRadius{r=8}
+    - potion{type=SPEED;duration=60;level=1} @Self
+    - potion{type=INVISIBILITY;duration=40;level=0} @Self
+    - effect:particles{p=happy_villager;a=5;hs=0.2;vs=0.2} @Self
+
+covid_final_breath:
+  Cooldown: 0
+  Skills:
+    #- message{m="&e[Covid]&7 Muoio... ma ti lascio un ricordino!"} @PlayersInRadius{r=4}
+    - potion{type=WITHER;duration=60;level=0} @PlayersInRadius{r=3}
+    - sound{s=entity.wither.hurt;volume=1;pitch=1} @Self
+    - effect:particles{p=smoke;a=20;hs=0.2;vs=0.2} @Self

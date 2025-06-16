@@ -1,0 +1,29 @@
+Pinder:
+  Type: VILLAGER
+  Display: '&fPinder'
+  Health: 150
+  Damage: 8
+  Armor: 4
+  Options:
+    PreventOtherDrops: true
+    AlwaysShowName: true
+    Silent: false
+    NoAI: false
+    KnockbackResistance: 0.3
+  AIGoalSelectors:
+    - 0 clear
+    - 1 meleeattack
+    - 2 randomstroll
+    - 3 lookatplayers
+  Skills:
+    - skill{s=SheepStrike} @LivingEntitiesInRadius{r=10}
+    - skill{s=HealWithHay} ~onDamaged
+    - skill{s=PinderTalk} ~onTimer:100
+  Equipment:
+    - STICK enchant=UNBREAKING:10 name="&5Pindella" lore="&o&7Lo strumento leggendario del pastore."
+  Drops:
+    - GOLD_NUGGET enchant=UNBREAKING:10 name="&dPinderite" lore="&7Una gemma rara che brilla di saggezza.":1
+    - ENCHANTED_BOOK enchant=UNBREAKING:10 name="&4Death Note" lore="&8Contiene i nomi dei suoi nemici":1
+    - STICK enchant=UNBREAKING:10 name="&5Pindella" lore="&o&7Lo strumento leggendario del pastore.":0.5
+  Modules:
+    ThreatTable: true
